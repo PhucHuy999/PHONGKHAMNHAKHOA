@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PHONGKHAMNHAKHOA
+namespace PHONGKHAMNHAKHOA.GUI
 {
     public partial class FormChinh : DevExpress.XtraBars.Ribbon.RibbonForm
     {

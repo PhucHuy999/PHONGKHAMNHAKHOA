@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,13 +9,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PHONGKHAMNHAKHOA
+namespace PHONGKHAMNHAKHOA.GUI
 {
-    public partial class Form1 : Form
+    public partial class FormBenhNhan : DevExpress.XtraEditors.XtraForm
     {
-        public Form1()
+        public FormBenhNhan()
         {
             InitializeComponent();
+        }
+
+        private void FormBenhNhan_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

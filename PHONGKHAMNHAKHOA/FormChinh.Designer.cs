@@ -1,4 +1,4 @@
-﻿namespace PHONGKHAMNHAKHOA
+﻿namespace PHONGKHAMNHAKHOA.GUI
 {
     partial class FormChinh
     {
