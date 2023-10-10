@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraBars;
+using DevExpress.XtraBars.Ribbon;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,30 @@ namespace PHONGKHAMNHAKHOA.GUI
             DialogResult h = MessageBox.Show("Bạn có chắc muốn thoát không?", "Error", MessageBoxButtons.OKCancel);
             if (h == DialogResult.OK)
                 Application.Exit();
+        }
+
+        private void FormChinh_Load(object sender, EventArgs e)
+        {
+            ribbon.SelectedPage = ribbonPage2; //set khi load hiển thị lên ribbonPage2(Bệnh Nhân) trước.
+        }
+        void openForm(Type typeForm) ///// Đoạn này thiết lập openform cho nó không bị mở thêm form mới khi click vào button mà khi form đã mở 
+        {
+            foreach (var frm in MdiChildren)
+            {
+                if (frm.GetType() == typeForm)
+                {
+                    frm.Activate();
+                    return;
+                }
+            }
+            Form f = (Form)Activator.CreateInstance(typeForm);
+            f.MdiParent = this;//Thuộc tính để show form trong nền form chính của documentManager
+            f.Show();
+
+        }
+        private void btnThongTinBenhNhan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(FormBenhNhan));
         }
     }
 }
