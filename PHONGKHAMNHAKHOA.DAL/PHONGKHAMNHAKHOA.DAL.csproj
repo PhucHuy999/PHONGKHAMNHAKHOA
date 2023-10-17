@@ -53,16 +53,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connect\CHUANDOAN_DIEUTRI.cs" />
-    <Compile Include="Connect\DONTHUOC.cs" />
-    <Compile Include="Connect\LOAIDIEUTRI.cs" />
-    <Compile Include="Connect\LOAITHUOC.cs" />
-    <Compile Include="Connect\Model1.cs" />
-    <Compile Include="Connect\NHAPXUAT_DCVLNK.cs" />
-    <Compile Include="Connect\THANHTOAN.cs" />
-    <Compile Include="Connect\THONGTINBENHNHAN.cs" />
-    <Compile Include="Connect\THONGTINCANLAMSANG.cs" />
-    <Compile Include="Connect\THONGTINLAMSANG.cs" />
+    <Compile Include="Entities\CHUANDOAN_DIEUTRI.cs" />
+    <Compile Include="Entities\DONTHUOC.cs" />
+    <Compile Include="Entities\LOAIDIEUTRI.cs" />
+    <Compile Include="Entities\LOAITHUOC.cs" />
+    <Compile Include="Entities\Model1.cs" />
+    <Compile Include="Entities\NHAPXUAT_DCVLNK.cs" />
+    <Compile Include="Entities\THANHTOAN.cs" />
+    <Compile Include="Entities\THONGTINBENHNHAN.cs" />
+    <Compile Include="Entities\THONGTINCANLAMSANG.cs" />
+    <Compile Include="Entities\THONGTINLAMSANG.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

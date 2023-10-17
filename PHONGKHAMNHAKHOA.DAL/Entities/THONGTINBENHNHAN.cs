@@ -1,4 +1,4 @@
-namespace PHONGKHAMNHAKHOA.DAL.Connect
+namespace PHONGKHAMNHAKHOA.DAL.Entities
 {
     using System;
     using System.Collections.Generic;
@@ -15,6 +15,8 @@ namespace PHONGKHAMNHAKHOA.DAL.Connect
             CHUANDOAN_DIEUTRI = new HashSet<CHUANDOAN_DIEUTRI>();
             DONTHUOC = new HashSet<DONTHUOC>();
             THANHTOAN = new HashSet<THANHTOAN>();
+            THONGTINCANLAMSANG = new HashSet<THONGTINCANLAMSANG>();
+            THONGTINLAMSANG = new HashSet<THONGTINLAMSANG>();
         }
 
         [Key]
@@ -46,5 +48,11 @@ namespace PHONGKHAMNHAKHOA.DAL.Connect
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<THANHTOAN> THANHTOAN { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<THONGTINCANLAMSANG> THONGTINCANLAMSANG { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<THONGTINLAMSANG> THONGTINLAMSANG { get; set; }
     }
 }

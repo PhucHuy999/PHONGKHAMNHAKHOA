@@ -49,5 +49,17 @@ namespace PHONGKHAMNHAKHOA.GUI
         {
             openForm(typeof(FormBenhNhan));
         }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)//open form thông tin lâm sàng
+        {
+            openForm(typeof(FormThongTinLamSang));
+
+        }
+
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)//open form thông tin cận lâm sàng
+        {
+            openForm(typeof(FormThongTinCanLamSang));
+
+        }
     }
 }

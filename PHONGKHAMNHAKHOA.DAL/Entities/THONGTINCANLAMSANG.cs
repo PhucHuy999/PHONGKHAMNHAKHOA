@@ -1,4 +1,4 @@
-namespace PHONGKHAMNHAKHOA.DAL.Connect
+namespace PHONGKHAMNHAKHOA.DAL.Entities
 {
     using System;
     using System.Collections.Generic;
@@ -9,12 +9,6 @@ namespace PHONGKHAMNHAKHOA.DAL.Connect
     [Table("THONGTINCANLAMSANG")]
     public partial class THONGTINCANLAMSANG
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public THONGTINCANLAMSANG()
-        {
-            CHUANDOAN_DIEUTRI = new HashSet<CHUANDOAN_DIEUTRI>();
-        }
-
         [Key]
         public int MATTCLS { get; set; }
 
@@ -42,7 +36,8 @@ namespace PHONGKHAMNHAKHOA.DAL.Connect
         [StringLength(100)]
         public string KHAC { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CHUANDOAN_DIEUTRI> CHUANDOAN_DIEUTRI { get; set; }
+        public int? MABN { get; set; }
+
+        public virtual THONGTINBENHNHAN THONGTINBENHNHAN { get; set; }
     }
 }

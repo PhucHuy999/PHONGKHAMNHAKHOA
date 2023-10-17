@@ -1,5 +1,5 @@
 ﻿using DevExpress.XtraEditors;
-using PHONGKHAMNHAKHOA.DAL.Connect;
+using PHONGKHAMNHAKHOA.DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +29,7 @@ namespace PHONGKHAMNHAKHOA.GUI
             _benhnhan = new BenhNhan();
             _showHide(true);
             loadData();
+
         }
         void _showHide(bool kt)
         {
@@ -91,10 +92,13 @@ namespace PHONGKHAMNHAKHOA.GUI
 
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            SaveData();
-            loadData();
-            _showHide(true);
-            _them = false;
+            if(KiemTraThongTinNhap())
+            {
+                SaveData();
+                loadData();
+                _showHide(true);
+                _them = false;
+            }
         }
 
         private void btnHuy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -140,6 +144,58 @@ namespace PHONGKHAMNHAKHOA.GUI
                 _benhnhan.Update(bn);
             }
         }
+        bool KiemTraThongTinNhap()
+        {
+            string dienthoai = txtDienThoai.Text;
+            long _ketqua;
+            char[] mangDIENTHOAI = dienthoai.ToCharArray();
+
+            if (txtHoTen.Text == "")
+            {
+                MessageBox.Show("Hãy nhập họ tên", "Thông Báo");
+                txtHoTen.Focus();
+                return false;
+            }
+
+            if (txtDienThoai.Text == "")
+            {
+                MessageBox.Show("Hãy nhập số điện thoại", "Thông Báo");
+                txtDienThoai.Focus();
+                return false;
+            }
+
+            if (!(long.TryParse(dienthoai, out _ketqua)))// Kiểm tra định dạng số điện thoại là số
+            {
+                MessageBox.Show("Hãy nhập đúng định dạng điện thoại là số", "Thông Báo");
+                txtDienThoai.Focus();
+                return false;
+            }
+
+            if (mangDIENTHOAI.Length != 10)
+            {
+                MessageBox.Show("Số điện thoại phải đúng đủ 10 số", "Thông Báo");
+                txtDienThoai.Focus();
+                return false;
+            }
+
+            if (txtDiaChi.Text == "")
+            {
+                MessageBox.Show("Hãy nhập địa chỉ", "Thông Báo");
+                txtDiaChi.Focus();
+                return false;
+            }
+
+            if (txtLyDoDenKham.Text == "")
+            {
+                MessageBox.Show("Hãy nhập lý do đến khám", "Thông Báo");
+                txtDiaChi.Focus();
+                return false;
+            }
+
+
+            return true;
+
+        }
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -160,5 +216,17 @@ namespace PHONGKHAMNHAKHOA.GUI
                 txtLyDoDenKham.Text = bn.LYDODENKHAM;
             }
         }
+
+        private void thôngTinLâmSàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormThongTinLamSang frm = new FormThongTinLamSang();
+            //frm._makycong = _makycong;
+            //frm._manv = int.Parse(gvBangCongChiTiet.GetFocusedRowCellValue("MANV").ToString());
+            //frm._hoten = gvBangCongChiTiet.GetFocusedRowCellValue("HOTEN").ToString();
+            //frm._ngay = gvBangCongChiTiet.FocusedColumn.FieldName.ToString();
+            frm.ShowDialog();
+        }
+
+
     }
 }

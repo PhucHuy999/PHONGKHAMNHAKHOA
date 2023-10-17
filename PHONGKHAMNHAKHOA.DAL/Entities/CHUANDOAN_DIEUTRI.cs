@@ -1,4 +1,4 @@
-namespace PHONGKHAMNHAKHOA.DAL.Connect
+namespace PHONGKHAMNHAKHOA.DAL.Entities
 {
     using System;
     using System.Collections.Generic;
@@ -31,17 +31,9 @@ namespace PHONGKHAMNHAKHOA.DAL.Connect
 
         public int? MABN { get; set; }
 
-        public int? MALS { get; set; }
-
-        public int? MATTCLS { get; set; }
-
         public virtual LOAIDIEUTRI LOAIDIEUTRI { get; set; }
 
         public virtual THONGTINBENHNHAN THONGTINBENHNHAN { get; set; }
-
-        public virtual THONGTINCANLAMSANG THONGTINCANLAMSANG { get; set; }
-
-        public virtual THONGTINLAMSANG THONGTINLAMSANG { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<THANHTOAN> THANHTOAN { get; set; }

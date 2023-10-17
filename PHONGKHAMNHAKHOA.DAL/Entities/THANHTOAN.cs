@@ -1,4 +1,4 @@
-namespace PHONGKHAMNHAKHOA.DAL.Connect
+namespace PHONGKHAMNHAKHOA.DAL.Entities
 {
     using System;
     using System.Collections.Generic;

@@ -1,4 +1,4 @@
-﻿using PHONGKHAMNHAKHOA.DAL.Connect;
+﻿using PHONGKHAMNHAKHOA.DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

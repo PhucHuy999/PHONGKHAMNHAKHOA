@@ -1,4 +1,4 @@
-namespace PHONGKHAMNHAKHOA.DAL.Connect
+namespace PHONGKHAMNHAKHOA.DAL.Entities
 {
     using System;
     using System.Collections.Generic;
@@ -6,25 +6,22 @@ namespace PHONGKHAMNHAKHOA.DAL.Connect
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("THONGTINLAMSANG")]
-    public partial class THONGTINLAMSANG
+    [Table("LOAITHUOC")]
+    public partial class LOAITHUOC
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public THONGTINLAMSANG()
+        public LOAITHUOC()
         {
-            CHUANDOAN_DIEUTRI = new HashSet<CHUANDOAN_DIEUTRI>();
+            DONTHUOC = new HashSet<DONTHUOC>();
         }
 
         [Key]
-        public int MALS { get; set; }
+        public int MALOAITHUOC { get; set; }
 
-        [StringLength(200)]
-        public string CHUANDOAN { get; set; }
-
-        [StringLength(200)]
-        public string NOIDUNGDIEUTRI { get; set; }
+        [StringLength(100)]
+        public string TENLOAITHUOC { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CHUANDOAN_DIEUTRI> CHUANDOAN_DIEUTRI { get; set; }
+        public virtual ICollection<DONTHUOC> DONTHUOC { get; set; }
     }
 }
