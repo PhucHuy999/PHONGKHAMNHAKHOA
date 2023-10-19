@@ -19,25 +19,33 @@ namespace PHONGKHAMNHAKHOA.BLL
         {
             return db.THONGTINCANLAMSANG.ToList();
         }
-        //public List<THONGTINLAMSANG_FULL> GetListFull()
-        //{
-        //    var AA = db.THONGTINLAMSANG.ToList();
-        //    List<THONGTINLAMSANG_FULL> BB = new List<THONGTINLAMSANG_FULL>();
-        //    THONGTINLAMSANG_FULL bnDTO;
-        //    foreach (var item in AA)
-        //    {
-        //        bnDTO = new THONGTINLAMSANG_FULL();
-        //        bnDTO.MALS = item.MALS;
-        //        bnDTO.CHUANDOAN = item.CHUANDOAN;
-        //        bnDTO.NOIDUNGDIEUTRI = item.NOIDUNGDIEUTRI;
-        //        bnDTO.MABN = item.MABN;
-        //        var bn = db.THONGTINBENHNHAN.FirstOrDefault(n => n.MABN == item.MABN);// để lấy được tên bệnh nhân 
-        //        bnDTO.HOTEN = bn.HOTEN;
+        public List<THONGTINCANLAMSANG_FULL> GetListFull()
+        {
+            var AA = db.THONGTINCANLAMSANG.ToList();
+            List<THONGTINCANLAMSANG_FULL> BB = new List<THONGTINCANLAMSANG_FULL>();
+            THONGTINCANLAMSANG_FULL bnDTO;
+            foreach (var item in AA)
+            {
+                bnDTO = new THONGTINCANLAMSANG_FULL();
+                bnDTO.MATTCLS = item.MATTCLS;
+                bnDTO.HUYETAPMACH = item.HUYETAPMACH;
+                bnDTO.DUONGHUYET = item.DUONGHUYET;
+                bnDTO.MAUKHODONG = item.MAUKHODONG;
+                bnDTO.BENHTIMBAMSINH = item.BENHTIMBAMSINH;
+                bnDTO.THIEUNANGTRITUE = item.THIEUNANGTRITUE;
+                bnDTO.PHIMXQUANG = item.PHIMXQUANG;
+                bnDTO.THONGTINBAOHANH = item.THONGTINBAOHANH;
+                bnDTO.KHAC = item.KHAC;
 
-        //        BB.Add(bnDTO);
-        //    }
-        //    return BB;
-        //}
+
+                bnDTO.MABN = item.MABN;
+                var bn = db.THONGTINBENHNHAN.FirstOrDefault(n => n.MABN == item.MABN);// để lấy được tên bệnh nhân 
+                bnDTO.HOTEN = bn.HOTEN;
+
+                BB.Add(bnDTO);
+            }
+            return BB;
+        }
         public THONGTINCANLAMSANG Add(THONGTINCANLAMSANG cls)
         {
             try
