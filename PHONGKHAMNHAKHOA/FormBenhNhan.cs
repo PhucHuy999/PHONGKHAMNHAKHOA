@@ -220,7 +220,7 @@ namespace PHONGKHAMNHAKHOA.GUI
         private void thôngTinLâmSàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormThongTinLamSang frm = new FormThongTinLamSang();
-            //frm._makycong = _makycong;
+            //frm._benhnhan = _makycong;
             //frm._manv = int.Parse(gvBangCongChiTiet.GetFocusedRowCellValue("MANV").ToString());
             //frm._hoten = gvBangCongChiTiet.GetFocusedRowCellValue("HOTEN").ToString();
             //frm._ngay = gvBangCongChiTiet.FocusedColumn.FieldName.ToString();

@@ -1,4 +1,4 @@
-﻿using PHONGKHAMNHAKHOA.BLL.DTO;
+﻿using PHONGKHAMNHAKHOA.BLL.FULL;
 using PHONGKHAMNHAKHOA.DAL.Entities;
 using System;
 using System.Collections.Generic;

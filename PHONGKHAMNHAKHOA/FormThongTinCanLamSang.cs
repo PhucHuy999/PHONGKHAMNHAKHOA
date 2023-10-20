@@ -1,5 +1,5 @@
 ﻿using DevExpress.XtraEditors;
-using PHONGKHAMNHAKHOA.BLL.DTO;
+using PHONGKHAMNHAKHOA.BLL.FULL;
 using PHONGKHAMNHAKHOA.BLL;
 using System;
 using System.Collections.Generic;

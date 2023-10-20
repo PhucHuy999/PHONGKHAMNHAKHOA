@@ -61,5 +61,10 @@ namespace PHONGKHAMNHAKHOA.GUI
             openForm(typeof(FormThongTinCanLamSang));
 
         }
+
+        private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)//open form chuẩn đoán điều trị
+        {
+            openForm(typeof(FormChuanDoanDieuTri));
+        }
     }
 }
