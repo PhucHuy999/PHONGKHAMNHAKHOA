@@ -437,8 +437,14 @@
             // 
             // MABN
             // 
+            this.MABN.AppearanceCell.Options.UseTextOptions = true;
+            this.MABN.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.MABN.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.MABN.AppearanceHeader.Options.UseFont = true;
             this.MABN.Caption = "Mã BN";
             this.MABN.FieldName = "MABN";
+            this.MABN.MaxWidth = 60;
+            this.MABN.MinWidth = 60;
             this.MABN.Name = "MABN";
             this.MABN.Visible = true;
             this.MABN.VisibleIndex = 0;
@@ -446,68 +452,98 @@
             // 
             // HOTEN
             // 
+            this.HOTEN.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.HOTEN.AppearanceHeader.Options.UseFont = true;
             this.HOTEN.Caption = "HỌ TÊN";
             this.HOTEN.FieldName = "HOTEN";
+            this.HOTEN.MaxWidth = 200;
+            this.HOTEN.MinWidth = 200;
             this.HOTEN.Name = "HOTEN";
             this.HOTEN.Visible = true;
             this.HOTEN.VisibleIndex = 1;
-            this.HOTEN.Width = 190;
+            this.HOTEN.Width = 200;
             // 
             // GIOITINH
             // 
+            this.GIOITINH.AppearanceCell.Options.UseTextOptions = true;
+            this.GIOITINH.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.GIOITINH.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.GIOITINH.AppearanceHeader.Options.UseFont = true;
             this.GIOITINH.Caption = "GIỚI TÍNH";
             this.GIOITINH.DisplayFormat.FormatString = "if([GIOITINH] = true, \'Nam\', \'Nữ\')";
             this.GIOITINH.FieldName = "GIOITINH";
             this.GIOITINH.FilterMode = DevExpress.XtraGrid.ColumnFilterMode.DisplayText;
+            this.GIOITINH.MaxWidth = 65;
+            this.GIOITINH.MinWidth = 65;
             this.GIOITINH.Name = "GIOITINH";
             this.GIOITINH.Visible = true;
             this.GIOITINH.VisibleIndex = 2;
-            this.GIOITINH.Width = 59;
+            this.GIOITINH.Width = 65;
             // 
             // NGAYSINH
             // 
+            this.NGAYSINH.AppearanceCell.Options.UseTextOptions = true;
+            this.NGAYSINH.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.NGAYSINH.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NGAYSINH.AppearanceHeader.Options.UseFont = true;
             this.NGAYSINH.Caption = "NGÀY SINH";
             this.NGAYSINH.FieldName = "NGAYSINH";
+            this.NGAYSINH.MaxWidth = 90;
+            this.NGAYSINH.MinWidth = 90;
             this.NGAYSINH.Name = "NGAYSINH";
             this.NGAYSINH.Visible = true;
             this.NGAYSINH.VisibleIndex = 3;
-            this.NGAYSINH.Width = 98;
+            this.NGAYSINH.Width = 90;
             // 
             // DIENTHOAI
             // 
+            this.DIENTHOAI.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.DIENTHOAI.AppearanceHeader.Options.UseFont = true;
             this.DIENTHOAI.Caption = "ĐIỆN THOẠI";
             this.DIENTHOAI.FieldName = "DIENTHOAI";
+            this.DIENTHOAI.MaxWidth = 140;
+            this.DIENTHOAI.MinWidth = 140;
             this.DIENTHOAI.Name = "DIENTHOAI";
             this.DIENTHOAI.Visible = true;
             this.DIENTHOAI.VisibleIndex = 4;
-            this.DIENTHOAI.Width = 118;
+            this.DIENTHOAI.Width = 140;
             // 
             // DIACHI
             // 
+            this.DIACHI.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.DIACHI.AppearanceHeader.Options.UseFont = true;
             this.DIACHI.Caption = "ĐỊA CHỈ";
             this.DIACHI.FieldName = "DIACHI";
+            this.DIACHI.MaxWidth = 200;
+            this.DIACHI.MinWidth = 200;
             this.DIACHI.Name = "DIACHI";
             this.DIACHI.Visible = true;
             this.DIACHI.VisibleIndex = 5;
-            this.DIACHI.Width = 214;
+            this.DIACHI.Width = 200;
             // 
             // NGAYKHAMDAUTIEN
             // 
+            this.NGAYKHAMDAUTIEN.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NGAYKHAMDAUTIEN.AppearanceHeader.Options.UseFont = true;
             this.NGAYKHAMDAUTIEN.Caption = "NGÀY KHÁM ĐẦU TIÊN";
             this.NGAYKHAMDAUTIEN.FieldName = "NGAYKHAMDAUTIEN";
+            this.NGAYKHAMDAUTIEN.MaxWidth = 130;
+            this.NGAYKHAMDAUTIEN.MinWidth = 130;
             this.NGAYKHAMDAUTIEN.Name = "NGAYKHAMDAUTIEN";
             this.NGAYKHAMDAUTIEN.Visible = true;
             this.NGAYKHAMDAUTIEN.VisibleIndex = 6;
-            this.NGAYKHAMDAUTIEN.Width = 118;
+            this.NGAYKHAMDAUTIEN.Width = 130;
             // 
             // LYDODENKHAM
             // 
+            this.LYDODENKHAM.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.LYDODENKHAM.AppearanceHeader.Options.UseFont = true;
             this.LYDODENKHAM.Caption = "LÝ DO ĐẾN KHÁM";
             this.LYDODENKHAM.FieldName = "LYDODENKHAM";
             this.LYDODENKHAM.Name = "LYDODENKHAM";
             this.LYDODENKHAM.Visible = true;
             this.LYDODENKHAM.VisibleIndex = 7;
-            this.LYDODENKHAM.Width = 361;
+            this.LYDODENKHAM.Width = 333;
             // 
             // contextMenuStrip1
             // 

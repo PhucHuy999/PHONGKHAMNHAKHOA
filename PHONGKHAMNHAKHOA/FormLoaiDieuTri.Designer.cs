@@ -275,21 +275,31 @@
             // 
             // MALOAIDC
             // 
+            this.MALOAIDC.AppearanceCell.Options.UseTextOptions = true;
+            this.MALOAIDC.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.MALOAIDC.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.MALOAIDC.AppearanceHeader.Options.UseFont = true;
             this.MALOAIDC.Caption = "MÃ LOẠI ĐIỀU TRỊ";
             this.MALOAIDC.FieldName = "MALOAIDC";
+            this.MALOAIDC.MaxWidth = 110;
+            this.MALOAIDC.MinWidth = 110;
             this.MALOAIDC.Name = "MALOAIDC";
             this.MALOAIDC.Visible = true;
             this.MALOAIDC.VisibleIndex = 0;
-            this.MALOAIDC.Width = 100;
+            this.MALOAIDC.Width = 110;
             // 
             // TENDIEUTRI
             // 
+            this.TENDIEUTRI.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.TENDIEUTRI.AppearanceHeader.Options.UseFont = true;
             this.TENDIEUTRI.Caption = "TÊN ĐIỀU TRỊ";
             this.TENDIEUTRI.FieldName = "TENDIEUTRI";
+            this.TENDIEUTRI.MaxWidth = 300;
+            this.TENDIEUTRI.MinWidth = 300;
             this.TENDIEUTRI.Name = "TENDIEUTRI";
             this.TENDIEUTRI.Visible = true;
             this.TENDIEUTRI.VisibleIndex = 1;
-            this.TENDIEUTRI.Width = 851;
+            this.TENDIEUTRI.Width = 300;
             // 
             // FormLoaiDieuTri
             // 

@@ -524,71 +524,115 @@
             // 
             // MATTCLS
             // 
+            this.MATTCLS.AppearanceCell.Options.UseTextOptions = true;
+            this.MATTCLS.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.MATTCLS.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.MATTCLS.AppearanceHeader.Options.UseFont = true;
             this.MATTCLS.Caption = "Mã CLS";
             this.MATTCLS.FieldName = "MATTCLS";
+            this.MATTCLS.MaxWidth = 60;
+            this.MATTCLS.MinWidth = 60;
             this.MATTCLS.Name = "MATTCLS";
             this.MATTCLS.Visible = true;
             this.MATTCLS.VisibleIndex = 0;
-            this.MATTCLS.Width = 106;
+            this.MATTCLS.Width = 60;
             // 
             // HOTEN
             // 
+            this.HOTEN.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.HOTEN.AppearanceHeader.Options.UseFont = true;
             this.HOTEN.Caption = "HỌ TÊN";
             this.HOTEN.FieldName = "HOTEN";
+            this.HOTEN.MaxWidth = 200;
+            this.HOTEN.MinWidth = 200;
             this.HOTEN.Name = "HOTEN";
             this.HOTEN.Visible = true;
             this.HOTEN.VisibleIndex = 1;
-            this.HOTEN.Width = 170;
+            this.HOTEN.Width = 200;
             // 
             // HUYETAPMACH
             // 
+            this.HUYETAPMACH.AppearanceCell.Options.UseTextOptions = true;
+            this.HUYETAPMACH.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.HUYETAPMACH.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.HUYETAPMACH.AppearanceHeader.Options.UseFont = true;
             this.HUYETAPMACH.Caption = "Huyết Áp";
             this.HUYETAPMACH.FieldName = "HUYETAPMACH";
+            this.HUYETAPMACH.MaxWidth = 90;
+            this.HUYETAPMACH.MinWidth = 90;
             this.HUYETAPMACH.Name = "HUYETAPMACH";
             this.HUYETAPMACH.Visible = true;
             this.HUYETAPMACH.VisibleIndex = 2;
-            this.HUYETAPMACH.Width = 80;
+            this.HUYETAPMACH.Width = 90;
             // 
             // DUONGHUYET
             // 
+            this.DUONGHUYET.AppearanceCell.Options.UseTextOptions = true;
+            this.DUONGHUYET.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.DUONGHUYET.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.DUONGHUYET.AppearanceHeader.Options.UseFont = true;
             this.DUONGHUYET.Caption = "ĐƯỜNG HUYẾT";
             this.DUONGHUYET.FieldName = "DUONGHUYET";
+            this.DUONGHUYET.MaxWidth = 90;
+            this.DUONGHUYET.MinWidth = 90;
             this.DUONGHUYET.Name = "DUONGHUYET";
             this.DUONGHUYET.Visible = true;
             this.DUONGHUYET.VisibleIndex = 3;
-            this.DUONGHUYET.Width = 80;
+            this.DUONGHUYET.Width = 90;
             // 
             // MAUKHODONG
             // 
+            this.MAUKHODONG.AppearanceCell.Options.UseTextOptions = true;
+            this.MAUKHODONG.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.MAUKHODONG.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.MAUKHODONG.AppearanceHeader.Options.UseFont = true;
             this.MAUKHODONG.Caption = "MÁU KHÓ ĐÔNG";
             this.MAUKHODONG.FieldName = "MAUKHODONG";
+            this.MAUKHODONG.MaxWidth = 95;
+            this.MAUKHODONG.MinWidth = 95;
             this.MAUKHODONG.Name = "MAUKHODONG";
             this.MAUKHODONG.Visible = true;
             this.MAUKHODONG.VisibleIndex = 4;
-            this.MAUKHODONG.Width = 80;
+            this.MAUKHODONG.Width = 95;
             // 
             // BENHTIMBAMSINH
             // 
+            this.BENHTIMBAMSINH.AppearanceCell.Options.UseTextOptions = true;
+            this.BENHTIMBAMSINH.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.BENHTIMBAMSINH.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.BENHTIMBAMSINH.AppearanceHeader.Options.UseFont = true;
             this.BENHTIMBAMSINH.Caption = "TIM BẨM SINH";
             this.BENHTIMBAMSINH.FieldName = "BENHTIMBAMSINH";
+            this.BENHTIMBAMSINH.MaxWidth = 95;
+            this.BENHTIMBAMSINH.MinWidth = 95;
             this.BENHTIMBAMSINH.Name = "BENHTIMBAMSINH";
             this.BENHTIMBAMSINH.Visible = true;
             this.BENHTIMBAMSINH.VisibleIndex = 5;
-            this.BENHTIMBAMSINH.Width = 80;
+            this.BENHTIMBAMSINH.Width = 95;
             // 
             // THIEUNANGTRITUE
             // 
+            this.THIEUNANGTRITUE.AppearanceCell.Options.UseTextOptions = true;
+            this.THIEUNANGTRITUE.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.THIEUNANGTRITUE.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.THIEUNANGTRITUE.AppearanceHeader.Options.UseFont = true;
             this.THIEUNANGTRITUE.Caption = "THIỂU NĂNG ";
             this.THIEUNANGTRITUE.FieldName = "THIEUNANGTRITUE";
+            this.THIEUNANGTRITUE.MaxWidth = 90;
+            this.THIEUNANGTRITUE.MinWidth = 90;
             this.THIEUNANGTRITUE.Name = "THIEUNANGTRITUE";
             this.THIEUNANGTRITUE.Visible = true;
             this.THIEUNANGTRITUE.VisibleIndex = 6;
-            this.THIEUNANGTRITUE.Width = 80;
+            this.THIEUNANGTRITUE.Width = 90;
             // 
             // PHIMXQUANG
             // 
+            this.PHIMXQUANG.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.PHIMXQUANG.AppearanceHeader.Options.UseFont = true;
             this.PHIMXQUANG.Caption = "PHIMXQUANG";
             this.PHIMXQUANG.FieldName = "PHIMXQUANG";
+            this.PHIMXQUANG.MaxWidth = 90;
+            this.PHIMXQUANG.MinWidth = 90;
             this.PHIMXQUANG.Name = "PHIMXQUANG";
             this.PHIMXQUANG.Visible = true;
             this.PHIMXQUANG.VisibleIndex = 7;
@@ -596,21 +640,29 @@
             // 
             // THONGTINBAOHANH
             // 
+            this.THONGTINBAOHANH.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.THONGTINBAOHANH.AppearanceHeader.Options.UseFont = true;
             this.THONGTINBAOHANH.Caption = "BẢO HÀNH";
             this.THONGTINBAOHANH.FieldName = "THONGTINBAOHANH";
+            this.THONGTINBAOHANH.MaxWidth = 200;
+            this.THONGTINBAOHANH.MinWidth = 200;
             this.THONGTINBAOHANH.Name = "THONGTINBAOHANH";
             this.THONGTINBAOHANH.Visible = true;
             this.THONGTINBAOHANH.VisibleIndex = 8;
-            this.THONGTINBAOHANH.Width = 266;
+            this.THONGTINBAOHANH.Width = 200;
             // 
             // KHAC
             // 
+            this.KHAC.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.KHAC.AppearanceHeader.Options.UseFont = true;
             this.KHAC.Caption = "KHÁC";
             this.KHAC.FieldName = "KHAC";
+            this.KHAC.MaxWidth = 200;
+            this.KHAC.MinWidth = 200;
             this.KHAC.Name = "KHAC";
             this.KHAC.Visible = true;
             this.KHAC.VisibleIndex = 9;
-            this.KHAC.Width = 334;
+            this.KHAC.Width = 200;
             // 
             // FormThongTinCanLamSang
             // 

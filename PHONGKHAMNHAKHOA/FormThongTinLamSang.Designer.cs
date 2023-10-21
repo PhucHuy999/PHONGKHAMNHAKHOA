@@ -362,16 +362,27 @@
             // 
             // MALS
             // 
+            this.MALS.AppearanceCell.Options.UseTextOptions = true;
+            this.MALS.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.MALS.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.MALS.AppearanceHeader.Options.UseFont = true;
             this.MALS.Caption = "Mã LS";
             this.MALS.FieldName = "MALS";
+            this.MALS.MaxWidth = 70;
+            this.MALS.MinWidth = 70;
             this.MALS.Name = "MALS";
             this.MALS.Visible = true;
             this.MALS.VisibleIndex = 0;
+            this.MALS.Width = 70;
             // 
             // HOTEN
             // 
+            this.HOTEN.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.HOTEN.AppearanceHeader.Options.UseFont = true;
             this.HOTEN.Caption = "HỌ TÊN";
             this.HOTEN.FieldName = "HOTEN";
+            this.HOTEN.MaxWidth = 200;
+            this.HOTEN.MinWidth = 200;
             this.HOTEN.Name = "HOTEN";
             this.HOTEN.Visible = true;
             this.HOTEN.VisibleIndex = 1;
@@ -379,21 +390,29 @@
             // 
             // CHUANDOAN
             // 
+            this.CHUANDOAN.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.CHUANDOAN.AppearanceHeader.Options.UseFont = true;
             this.CHUANDOAN.Caption = "CHUẨN ĐOÁN";
             this.CHUANDOAN.FieldName = "CHUANDOAN";
+            this.CHUANDOAN.MaxWidth = 250;
+            this.CHUANDOAN.MinWidth = 250;
             this.CHUANDOAN.Name = "CHUANDOAN";
             this.CHUANDOAN.Visible = true;
             this.CHUANDOAN.VisibleIndex = 2;
-            this.CHUANDOAN.Width = 300;
+            this.CHUANDOAN.Width = 250;
             // 
             // NOIDUNGDIEUTRI
             // 
+            this.NOIDUNGDIEUTRI.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.NOIDUNGDIEUTRI.AppearanceHeader.Options.UseFont = true;
             this.NOIDUNGDIEUTRI.Caption = "NỘI DUNG ĐIỀU TRỊ";
             this.NOIDUNGDIEUTRI.FieldName = "NOIDUNGDIEUTRI";
+            this.NOIDUNGDIEUTRI.MaxWidth = 250;
+            this.NOIDUNGDIEUTRI.MinWidth = 250;
             this.NOIDUNGDIEUTRI.Name = "NOIDUNGDIEUTRI";
             this.NOIDUNGDIEUTRI.Visible = true;
             this.NOIDUNGDIEUTRI.VisibleIndex = 3;
-            this.NOIDUNGDIEUTRI.Width = 562;
+            this.NOIDUNGDIEUTRI.Width = 250;
             // 
             // FormThongTinLamSang
             // 

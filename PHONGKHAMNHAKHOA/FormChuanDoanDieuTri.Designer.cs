@@ -476,17 +476,29 @@
             // 
             // MACDDC
             // 
+            this.MACDDC.AppearanceCell.Options.UseTextOptions = true;
+            this.MACDDC.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.MACDDC.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.MACDDC.AppearanceHeader.Options.UseFont = true;
+            this.MACDDC.AppearanceHeader.Options.UseTextOptions = true;
+            this.MACDDC.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.MACDDC.Caption = "MA CD_DC";
             this.MACDDC.FieldName = "MACDDC";
+            this.MACDDC.MaxWidth = 70;
+            this.MACDDC.MinWidth = 70;
             this.MACDDC.Name = "MACDDC";
             this.MACDDC.Visible = true;
             this.MACDDC.VisibleIndex = 0;
-            this.MACDDC.Width = 60;
+            this.MACDDC.Width = 70;
             // 
             // HOTEN
             // 
+            this.HOTEN.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.HOTEN.AppearanceHeader.Options.UseFont = true;
             this.HOTEN.Caption = "HỌ TÊN";
             this.HOTEN.FieldName = "HOTEN";
+            this.HOTEN.MaxWidth = 200;
+            this.HOTEN.MinWidth = 200;
             this.HOTEN.Name = "HOTEN";
             this.HOTEN.Visible = true;
             this.HOTEN.VisibleIndex = 1;
@@ -494,8 +506,12 @@
             // 
             // TENDIEUTRI
             // 
+            this.TENDIEUTRI.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.TENDIEUTRI.AppearanceHeader.Options.UseFont = true;
             this.TENDIEUTRI.Caption = "TÊN ĐIỀU TRỊ";
             this.TENDIEUTRI.FieldName = "TENDIEUTRI";
+            this.TENDIEUTRI.MaxWidth = 220;
+            this.TENDIEUTRI.MinWidth = 220;
             this.TENDIEUTRI.Name = "TENDIEUTRI";
             this.TENDIEUTRI.Visible = true;
             this.TENDIEUTRI.VisibleIndex = 2;
@@ -503,8 +519,14 @@
             // 
             // DONVITINH
             // 
+            this.DONVITINH.AppearanceCell.Options.UseTextOptions = true;
+            this.DONVITINH.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.DONVITINH.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.DONVITINH.AppearanceHeader.Options.UseFont = true;
             this.DONVITINH.Caption = "ĐƠN VỊ TÍNH";
             this.DONVITINH.FieldName = "DONVITINH";
+            this.DONVITINH.MaxWidth = 90;
+            this.DONVITINH.MinWidth = 90;
             this.DONVITINH.Name = "DONVITINH";
             this.DONVITINH.Visible = true;
             this.DONVITINH.VisibleIndex = 3;
@@ -512,8 +534,14 @@
             // 
             // SOLUONG
             // 
+            this.SOLUONG.AppearanceCell.Options.UseTextOptions = true;
+            this.SOLUONG.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.SOLUONG.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.SOLUONG.AppearanceHeader.Options.UseFont = true;
             this.SOLUONG.Caption = "SỐ LƯỢNG";
             this.SOLUONG.FieldName = "SOLUONG";
+            this.SOLUONG.MaxWidth = 90;
+            this.SOLUONG.MinWidth = 90;
             this.SOLUONG.Name = "SOLUONG";
             this.SOLUONG.Visible = true;
             this.SOLUONG.VisibleIndex = 4;
@@ -521,10 +549,16 @@
             // 
             // DONGIA
             // 
+            this.DONGIA.AppearanceCell.Options.UseTextOptions = true;
+            this.DONGIA.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.DONGIA.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.DONGIA.AppearanceHeader.Options.UseFont = true;
             this.DONGIA.Caption = "ĐƠN GIÁ";
             this.DONGIA.DisplayFormat.FormatString = "n0";
             this.DONGIA.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.DONGIA.FieldName = "DONGIA";
+            this.DONGIA.MaxWidth = 90;
+            this.DONGIA.MinWidth = 90;
             this.DONGIA.Name = "DONGIA";
             this.DONGIA.Visible = true;
             this.DONGIA.VisibleIndex = 5;
@@ -532,14 +566,20 @@
             // 
             // THANHTIEN
             // 
+            this.THANHTIEN.AppearanceCell.Options.UseTextOptions = true;
+            this.THANHTIEN.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.THANHTIEN.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.THANHTIEN.AppearanceHeader.Options.UseFont = true;
             this.THANHTIEN.Caption = "THÀNH TIỀN";
             this.THANHTIEN.DisplayFormat.FormatString = "n0";
             this.THANHTIEN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.THANHTIEN.FieldName = "THANHTIEN";
+            this.THANHTIEN.MaxWidth = 100;
+            this.THANHTIEN.MinWidth = 100;
             this.THANHTIEN.Name = "THANHTIEN";
             this.THANHTIEN.Visible = true;
             this.THANHTIEN.VisibleIndex = 6;
-            this.THANHTIEN.Width = 454;
+            this.THANHTIEN.Width = 100;
             // 
             // FormChuanDoanDieuTri
             // 
