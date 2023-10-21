@@ -227,6 +227,6 @@ namespace PHONGKHAMNHAKHOA.GUI
             frm.ShowDialog();
         }
 
-
+        
     }
 }

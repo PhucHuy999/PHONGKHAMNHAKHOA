@@ -66,5 +66,11 @@ namespace PHONGKHAMNHAKHOA.GUI
         {
             openForm(typeof(FormChuanDoanDieuTri));
         }
+
+        private void btnLoaiDieuTri_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(FormLoaiDieuTri));
+
+        }
     }
 }
