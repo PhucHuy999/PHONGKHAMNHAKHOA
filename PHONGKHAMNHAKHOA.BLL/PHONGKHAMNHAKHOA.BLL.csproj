@@ -53,10 +53,13 @@
   <ItemGroup>
     <Compile Include="BenhNhan.cs" />
     <Compile Include="ChuanDoanDieuTri.cs" />
+    <Compile Include="DonThuoc.cs" />
     <Compile Include="FULL\CHUANDOANDIEUTRI_FULL.cs" />
+    <Compile Include="FULL\DONTHUOC_FULL.cs" />
     <Compile Include="FULL\THONGTINCANLAMSANG_FULL.cs" />
     <Compile Include="FULL\THONGTINLAMSANG_FULL.cs" />
     <Compile Include="LoaiDieuTri.cs" />
+    <Compile Include="LoaiThuoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThongTinCanLamSang.cs" />
     <Compile Include="ThongTinLamSang.cs" />

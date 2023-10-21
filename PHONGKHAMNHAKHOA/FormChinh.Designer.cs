@@ -44,9 +44,12 @@
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnLoaiDieuTri = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDonThuoc = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -54,8 +57,7 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnLoaiDieuTri = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -80,9 +82,11 @@
             this.barButtonItem5,
             this.barButtonItem6,
             this.barButtonItem7,
-            this.btnLoaiDieuTri});
+            this.btnLoaiDieuTri,
+            this.btnDonThuoc,
+            this.barButtonItem8});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 16;
+            this.ribbon.MaxItemId = 18;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -194,11 +198,29 @@
             // 
             // barButtonItem7
             // 
-            this.barButtonItem7.Caption = "Thanh Toán";
+            this.barButtonItem7.Caption = "Thanh_Toán";
             this.barButtonItem7.Id = 14;
             this.barButtonItem7.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem7.ImageOptions.SvgImage")));
             this.barButtonItem7.Name = "barButtonItem7";
             this.barButtonItem7.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // btnLoaiDieuTri
+            // 
+            this.btnLoaiDieuTri.Caption = "Loại điều trị";
+            this.btnLoaiDieuTri.Id = 15;
+            this.btnLoaiDieuTri.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLoaiDieuTri.ImageOptions.SvgImage")));
+            this.btnLoaiDieuTri.Name = "btnLoaiDieuTri";
+            this.btnLoaiDieuTri.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnLoaiDieuTri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLoaiDieuTri_ItemClick);
+            // 
+            // btnDonThuoc
+            // 
+            this.btnDonThuoc.Caption = "Đơn thuốc";
+            this.btnDonThuoc.Id = 16;
+            this.btnDonThuoc.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDonThuoc.ImageOptions.SvgImage")));
+            this.btnDonThuoc.Name = "btnDonThuoc";
+            this.btnDonThuoc.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnDonThuoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDonThuoc_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -226,12 +248,20 @@
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "Bệnh Nhân";
             // 
+            // ribbonPageGroup5
+            // 
+            this.ribbonPageGroup5.ItemLinks.Add(this.btnLoaiDieuTri, true);
+            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem8, true);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            this.ribbonPageGroup5.Text = "Thêm";
+            // 
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.btnThongTinBenhNhan);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem4, true);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem5, true);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem6, true);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnDonThuoc, true);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Thông tin";
             // 
@@ -239,7 +269,7 @@
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem7, true);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "T/Toán";
+            this.ribbonPageGroup4.Text = "Thanh Toán";
             // 
             // ribbonPage3
             // 
@@ -271,20 +301,13 @@
             this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView1});
             // 
-            // ribbonPageGroup5
+            // barButtonItem8
             // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.btnLoaiDieuTri, true);
-            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.Text = "Thêm";
-            // 
-            // btnLoaiDieuTri
-            // 
-            this.btnLoaiDieuTri.Caption = "Loại điều trị";
-            this.btnLoaiDieuTri.Id = 15;
-            this.btnLoaiDieuTri.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLoaiDieuTri.ImageOptions.SvgImage")));
-            this.btnLoaiDieuTri.Name = "btnLoaiDieuTri";
-            this.btnLoaiDieuTri.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.btnLoaiDieuTri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLoaiDieuTri_ItemClick);
+            this.barButtonItem8.Caption = "Loại thuốc";
+            this.barButtonItem8.Id = 17;
+            this.barButtonItem8.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem8.ImageOptions.SvgImage")));
+            this.barButtonItem8.Name = "barButtonItem8";
+            this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
             // 
             // FormChinh
             // 
@@ -337,5 +360,7 @@
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
         private DevExpress.XtraBars.BarButtonItem btnLoaiDieuTri;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+        private DevExpress.XtraBars.BarButtonItem btnDonThuoc;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
     }
 }

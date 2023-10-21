@@ -189,5 +189,7 @@ namespace PHONGKHAMNHAKHOA.GUI
                 slkBenhNhan.EditValue = cls.MABN;
             }
         }
+
+        
     }
 }
