@@ -46,6 +46,7 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtLyDoDenKham = new System.Windows.Forms.TextBox();
             this.dtNgayKhamDauTien = new System.Windows.Forms.DateTimePicker();
@@ -60,6 +61,8 @@
             this.chkGioiTinh = new System.Windows.Forms.CheckBox();
             this.txtHoTen = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.gcDanhSach = new DevExpress.XtraGrid.GridControl();
             this.gvDanhSach = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.MABN = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -78,6 +81,7 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDienThoai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoTen.Properties)).BeginInit();
@@ -203,15 +207,15 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1243, 24);
+            this.barDockControlTop.Size = new System.Drawing.Size(1626, 24);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 564);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 704);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1243, 20);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1626, 20);
             // 
             // barDockControlLeft
             // 
@@ -219,15 +223,15 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 540);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 680);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1243, 24);
+            this.barDockControlRight.Location = new System.Drawing.Point(1626, 24);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 540);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 680);
             // 
             // barButtonItem1
             // 
@@ -244,34 +248,47 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.labelControl2);
-            this.splitContainer1.Panel1.Controls.Add(this.txtLyDoDenKham);
-            this.splitContainer1.Panel1.Controls.Add(this.dtNgayKhamDauTien);
-            this.splitContainer1.Panel1.Controls.Add(this.labelControl6);
-            this.splitContainer1.Panel1.Controls.Add(this.labelControl7);
-            this.splitContainer1.Panel1.Controls.Add(this.labelControl5);
-            this.splitContainer1.Panel1.Controls.Add(this.txtDiaChi);
-            this.splitContainer1.Panel1.Controls.Add(this.labelControl4);
-            this.splitContainer1.Panel1.Controls.Add(this.txtDienThoai);
-            this.splitContainer1.Panel1.Controls.Add(this.labelControl3);
-            this.splitContainer1.Panel1.Controls.Add(this.dtNgaySinh);
-            this.splitContainer1.Panel1.Controls.Add(this.chkGioiTinh);
-            this.splitContainer1.Panel1.Controls.Add(this.txtHoTen);
-            this.splitContainer1.Panel1.Controls.Add(this.labelControl1);
+            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Controls.Add(this.txtTimKiem);
             this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gcDanhSach);
-            this.splitContainer1.Size = new System.Drawing.Size(1243, 540);
-            this.splitContainer1.SplitterDistance = 181;
+            this.splitContainer1.Size = new System.Drawing.Size(1626, 680);
+            this.splitContainer1.SplitterDistance = 211;
             this.splitContainer1.TabIndex = 7;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.labelControl2);
+            this.groupBox1.Controls.Add(this.txtLyDoDenKham);
+            this.groupBox1.Controls.Add(this.dtNgayKhamDauTien);
+            this.groupBox1.Controls.Add(this.labelControl6);
+            this.groupBox1.Controls.Add(this.labelControl7);
+            this.groupBox1.Controls.Add(this.labelControl5);
+            this.groupBox1.Controls.Add(this.txtDiaChi);
+            this.groupBox1.Controls.Add(this.labelControl4);
+            this.groupBox1.Controls.Add(this.txtDienThoai);
+            this.groupBox1.Controls.Add(this.labelControl3);
+            this.groupBox1.Controls.Add(this.dtNgaySinh);
+            this.groupBox1.Controls.Add(this.chkGioiTinh);
+            this.groupBox1.Controls.Add(this.txtHoTen);
+            this.groupBox1.Controls.Add(this.labelControl1);
+            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Location = new System.Drawing.Point(23, 20);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(880, 187);
+            this.groupBox1.TabIndex = 30;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thông tin";
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(113, 66);
+            this.labelControl2.Location = new System.Drawing.Point(27, 58);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(51, 17);
             this.labelControl2.TabIndex = 27;
@@ -279,9 +296,9 @@
             // 
             // txtLyDoDenKham
             // 
-            this.txtLyDoDenKham.Location = new System.Drawing.Point(638, 74);
+            this.txtLyDoDenKham.Location = new System.Drawing.Point(552, 66);
             this.txtLyDoDenKham.Name = "txtLyDoDenKham";
-            this.txtLyDoDenKham.Size = new System.Drawing.Size(393, 21);
+            this.txtLyDoDenKham.Size = new System.Drawing.Size(308, 21);
             this.txtLyDoDenKham.TabIndex = 26;
             // 
             // dtNgayKhamDauTien
@@ -290,7 +307,7 @@
             this.dtNgayKhamDauTien.CustomFormat = "dd/MM/yyyy";
             this.dtNgayKhamDauTien.Font = new System.Drawing.Font("Tahoma", 10F);
             this.dtNgayKhamDauTien.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtNgayKhamDauTien.Location = new System.Drawing.Point(638, 35);
+            this.dtNgayKhamDauTien.Location = new System.Drawing.Point(552, 27);
             this.dtNgayKhamDauTien.Name = "dtNgayKhamDauTien";
             this.dtNgayKhamDauTien.Size = new System.Drawing.Size(159, 24);
             this.dtNgayKhamDauTien.TabIndex = 25;
@@ -299,7 +316,7 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F);
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(107, 96);
+            this.labelControl6.Location = new System.Drawing.Point(16, 88);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(62, 17);
             this.labelControl6.TabIndex = 24;
@@ -309,7 +326,7 @@
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(520, 74);
+            this.labelControl7.Location = new System.Drawing.Point(434, 66);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(105, 17);
             this.labelControl7.TabIndex = 15;
@@ -319,7 +336,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(496, 39);
+            this.labelControl5.Location = new System.Drawing.Point(410, 31);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(129, 17);
             this.labelControl5.TabIndex = 11;
@@ -327,19 +344,19 @@
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(177, 155);
+            this.txtDiaChi.Location = new System.Drawing.Point(91, 147);
             this.txtDiaChi.MenuManager = this.barManager1;
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtDiaChi.Properties.Appearance.Options.UseFont = true;
-            this.txtDiaChi.Size = new System.Drawing.Size(382, 22);
+            this.txtDiaChi.Size = new System.Drawing.Size(305, 22);
             this.txtDiaChi.TabIndex = 9;
             // 
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(124, 158);
+            this.labelControl4.Location = new System.Drawing.Point(38, 150);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(40, 17);
             this.labelControl4.TabIndex = 8;
@@ -347,7 +364,7 @@
             // 
             // txtDienThoai
             // 
-            this.txtDienThoai.Location = new System.Drawing.Point(177, 125);
+            this.txtDienThoai.Location = new System.Drawing.Point(91, 117);
             this.txtDienThoai.MenuManager = this.barManager1;
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
@@ -359,7 +376,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(103, 128);
+            this.labelControl3.Location = new System.Drawing.Point(17, 120);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(61, 17);
             this.labelControl3.TabIndex = 6;
@@ -371,7 +388,7 @@
             this.dtNgaySinh.CustomFormat = "dd/MM/yyyy";
             this.dtNgaySinh.Font = new System.Drawing.Font("Tahoma", 10F);
             this.dtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtNgaySinh.Location = new System.Drawing.Point(177, 92);
+            this.dtNgaySinh.Location = new System.Drawing.Point(91, 84);
             this.dtNgaySinh.Name = "dtNgaySinh";
             this.dtNgaySinh.Size = new System.Drawing.Size(159, 24);
             this.dtNgaySinh.TabIndex = 3;
@@ -380,7 +397,7 @@
             // 
             this.chkGioiTinh.AutoSize = true;
             this.chkGioiTinh.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.chkGioiTinh.Location = new System.Drawing.Point(177, 65);
+            this.chkGioiTinh.Location = new System.Drawing.Point(91, 57);
             this.chkGioiTinh.Name = "chkGioiTinh";
             this.chkGioiTinh.Size = new System.Drawing.Size(82, 21);
             this.chkGioiTinh.TabIndex = 2;
@@ -389,7 +406,7 @@
             // 
             // txtHoTen
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(177, 36);
+            this.txtHoTen.Location = new System.Drawing.Point(91, 28);
             this.txtHoTen.MenuManager = this.barManager1;
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
@@ -401,11 +418,29 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(123, 39);
+            this.labelControl1.Location = new System.Drawing.Point(37, 31);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(41, 17);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Họ tên";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label1.Location = new System.Drawing.Point(932, 120);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 17);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Tìm BN";
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(989, 118);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(250, 21);
+            this.txtTimKiem.TabIndex = 28;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // gcDanhSach
             // 
@@ -414,7 +449,7 @@
             this.gcDanhSach.MainView = this.gvDanhSach;
             this.gcDanhSach.MenuManager = this.barManager1;
             this.gcDanhSach.Name = "gcDanhSach";
-            this.gcDanhSach.Size = new System.Drawing.Size(1243, 355);
+            this.gcDanhSach.Size = new System.Drawing.Size(1626, 465);
             this.gcDanhSach.TabIndex = 0;
             this.gcDanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDanhSach});
@@ -570,7 +605,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1243, 584);
+            this.ClientSize = new System.Drawing.Size(1626, 724);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.barDockControlLeft);
@@ -586,6 +621,8 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDienThoai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoTen.Properties)).EndInit();
@@ -642,5 +679,8 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem thôngTinLâmSàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinCậnLâmSàngToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

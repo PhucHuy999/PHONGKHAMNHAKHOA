@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PHONGKHAMNHAKHOA.BLL;
+using Unidecode.NET;
 
 namespace PHONGKHAMNHAKHOA.GUI
 {
@@ -71,8 +72,6 @@ namespace PHONGKHAMNHAKHOA.GUI
             _reset();
             _showHide(false);
             _them = true;
-            //txtHoTen.Text = string.Empty;
-            
         }
 
         private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -208,25 +207,36 @@ namespace PHONGKHAMNHAKHOA.GUI
                 _id = int.Parse(gvDanhSach.GetFocusedRowCellValue("MABN").ToString());
                 var bn = _benhnhan.GetItem(_id);
                 txtHoTen.Text = bn.HOTEN;
-                chkGioiTinh.Checked = bn.GIOITINH.Value;                                 
+                chkGioiTinh.Checked = bn.GIOITINH.Value;
                 dtNgaySinh.Value = bn.NGAYSINH.Value;
                 txtDienThoai.Text = bn.DIENTHOAI;
                 txtDiaChi.Text = bn.DIACHI;
                 dtNgayKhamDauTien.Value = bn.NGAYKHAMDAUTIEN.Value;
                 txtLyDoDenKham.Text = bn.LYDODENKHAM;
             }
+
         }
 
         private void thôngTinLâmSàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormThongTinLamSang frm = new FormThongTinLamSang();
-            //frm._benhnhan = _makycong;
-            //frm._manv = int.Parse(gvBangCongChiTiet.GetFocusedRowCellValue("MANV").ToString());
-            //frm._hoten = gvBangCongChiTiet.GetFocusedRowCellValue("HOTEN").ToString();
-            //frm._ngay = gvBangCongChiTiet.FocusedColumn.FieldName.ToString();
             frm.ShowDialog();
+
         }
 
-        
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txtTimKiem.Text.ToLower().Trim();
+
+            // Chuyển đổi từ khóa tìm kiếm và tên bệnh nhân thành chuỗi không dấu
+            string keywordWithoutDiacritics = keyword.Unidecode();
+
+            var filteredList = _lstbenhnhan.Where(bn =>
+                bn.HOTEN.Unidecode().ToLower().Contains(keywordWithoutDiacritics) ||
+                bn.MABN.ToString().Contains(keyword)
+            ).ToList();
+
+            gcDanhSach.DataSource = filteredList;
+        }
     }
 }

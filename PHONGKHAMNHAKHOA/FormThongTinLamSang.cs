@@ -22,11 +22,12 @@ namespace PHONGKHAMNHAKHOA.GUI
         List<THONGTINLAMSANG_FULL> _lstttls;
         bool _them;
         int _id;
+
         public FormThongTinLamSang()
         {
             InitializeComponent();
         }
-
+        
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -41,6 +42,7 @@ namespace PHONGKHAMNHAKHOA.GUI
             _them = false;
             _showHide(true);
             loadData();
+
         }
         void loadBenhNhan()
         {
