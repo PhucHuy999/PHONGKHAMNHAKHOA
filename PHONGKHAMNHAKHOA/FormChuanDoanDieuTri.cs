@@ -37,24 +37,22 @@ namespace PHONGKHAMNHAKHOA.GUI
             _cddt = new ChuanDoanDieuTri();
             _benhnhan = new BenhNhan();
             _loaidieutri = new LoaiDieuTri();
-            loadBenhNhan();
-            loadLoaiDieuTri();
+            loadComBo();
             _them = false;
             _showHide(true);
             loadData();
         }
-        void loadBenhNhan()
+        void loadComBo()
         {
             slkBenhNhan.Properties.DataSource = _benhnhan.GetAll();
             slkBenhNhan.Properties.ValueMember = "MABN";
             slkBenhNhan.Properties.DisplayMember = "HOTEN";
-        }
-        void loadLoaiDieuTri()
-        {
+
             slkLoaiDieuTri.Properties.DataSource = _loaidieutri.GetAll();
             slkLoaiDieuTri.Properties.ValueMember = "MALOAIDC";
             slkLoaiDieuTri.Properties.DisplayMember = "TENDIEUTRI";
         }
+        
         private void _reset()// reset lai trang text khi sử dụng chức năng thêm
         {
             txtDonViTinh.Text = string.Empty;
@@ -146,7 +144,7 @@ namespace PHONGKHAMNHAKHOA.GUI
                 txtDonGia.Text = cddt.DONGIA.ToString();
                 txtThanhTien.Text = cddt.THANHTIEN.ToString();
 
-                slkLoaiDieuTri.EditValue = cddt.MACDDC;
+                slkLoaiDieuTri.EditValue = cddt.MALOAIDC;
                 slkBenhNhan.EditValue = cddt.MABN;
             }
         }
@@ -160,7 +158,7 @@ namespace PHONGKHAMNHAKHOA.GUI
                 cddt.DONGIA = double.Parse(txtDonGia.EditValue.ToString());
                 cddt.THANHTIEN = double.Parse(txtThanhTien.EditValue.ToString());
 
-                cddt.MABN = int.Parse(slkBenhNhan.EditValue.ToString());
+                cddt.MALOAIDC = int.Parse(slkLoaiDieuTri.EditValue.ToString());
                 cddt.MABN = int.Parse(slkBenhNhan.EditValue.ToString());
 
                 _cddt.Add(cddt);
@@ -173,7 +171,7 @@ namespace PHONGKHAMNHAKHOA.GUI
                 cddt.DONGIA = double.Parse(txtDonGia.EditValue.ToString());
                 cddt.THANHTIEN = double.Parse(txtThanhTien.EditValue.ToString());
 
-                cddt.MABN = int.Parse(slkBenhNhan.EditValue.ToString());
+                cddt.MALOAIDC = int.Parse(slkLoaiDieuTri.EditValue.ToString());
                 cddt.MABN = int.Parse(slkBenhNhan.EditValue.ToString());
 
                 _cddt.Update(cddt);

@@ -34,7 +34,7 @@ namespace PHONGKHAMNHAKHOA.BLL
                 ccdtDTO.THANHTIEN = item.THANHTIEN;
 
                 ccdtDTO.MALOAIDC = item.MALOAIDC;
-                var dt = db.LOAIDIEUTRI.FirstOrDefault(n => n.MALOAIDC == item.MALOAIDC);// để lấy được tên loại điều trị
+                var dt = db.LOAIDIEUTRI.FirstOrDefault(c => c.MALOAIDC == item.MALOAIDC);// để lấy được tên loại điều trị
                 ccdtDTO.TENDIEUTRI = dt.TENDIEUTRI;
 
                 ccdtDTO.MABN = item.MABN;

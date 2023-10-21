@@ -277,7 +277,7 @@
             this.txtThanhTien.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtThanhTien.Properties.Appearance.Options.UseFont = true;
             this.txtThanhTien.Size = new System.Drawing.Size(276, 22);
-            this.txtThanhTien.TabIndex = 17;
+            this.txtThanhTien.TabIndex = 6;
             // 
             // txtDonGia
             // 
@@ -287,7 +287,7 @@
             this.txtDonGia.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtDonGia.Properties.Appearance.Options.UseFont = true;
             this.txtDonGia.Size = new System.Drawing.Size(276, 22);
-            this.txtDonGia.TabIndex = 16;
+            this.txtDonGia.TabIndex = 5;
             // 
             // labelControl6
             // 
@@ -328,7 +328,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.slkLoaiDieuTri.Properties.PopupView = this.gridView1;
             this.slkLoaiDieuTri.Size = new System.Drawing.Size(276, 20);
-            this.slkLoaiDieuTri.TabIndex = 12;
+            this.slkLoaiDieuTri.TabIndex = 2;
             // 
             // gridView1
             // 
@@ -367,7 +367,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.slkBenhNhan.Properties.PopupView = this.searchLookUpEdit1View;
             this.slkBenhNhan.Size = new System.Drawing.Size(262, 20);
-            this.slkBenhNhan.TabIndex = 11;
+            this.slkBenhNhan.TabIndex = 1;
             // 
             // searchLookUpEdit1View
             // 
@@ -405,7 +405,7 @@
             this.txtSoLuong.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtSoLuong.Properties.Appearance.Options.UseFont = true;
             this.txtSoLuong.Size = new System.Drawing.Size(276, 22);
-            this.txtSoLuong.TabIndex = 9;
+            this.txtSoLuong.TabIndex = 4;
             // 
             // labelControl4
             // 
@@ -425,7 +425,7 @@
             this.txtDonViTinh.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtDonViTinh.Properties.Appearance.Options.UseFont = true;
             this.txtDonViTinh.Size = new System.Drawing.Size(276, 22);
-            this.txtDonViTinh.TabIndex = 7;
+            this.txtDonViTinh.TabIndex = 3;
             // 
             // labelControl3
             // 
@@ -481,6 +481,7 @@
             this.MACDDC.Name = "MACDDC";
             this.MACDDC.Visible = true;
             this.MACDDC.VisibleIndex = 0;
+            this.MACDDC.Width = 60;
             // 
             // HOTEN
             // 
@@ -498,7 +499,7 @@
             this.TENDIEUTRI.Name = "TENDIEUTRI";
             this.TENDIEUTRI.Visible = true;
             this.TENDIEUTRI.VisibleIndex = 2;
-            this.TENDIEUTRI.Width = 250;
+            this.TENDIEUTRI.Width = 220;
             // 
             // DONVITINH
             // 
@@ -507,7 +508,7 @@
             this.DONVITINH.Name = "DONVITINH";
             this.DONVITINH.Visible = true;
             this.DONVITINH.VisibleIndex = 3;
-            this.DONVITINH.Width = 80;
+            this.DONVITINH.Width = 90;
             // 
             // SOLUONG
             // 
@@ -516,25 +517,29 @@
             this.SOLUONG.Name = "SOLUONG";
             this.SOLUONG.Visible = true;
             this.SOLUONG.VisibleIndex = 4;
-            this.SOLUONG.Width = 80;
+            this.SOLUONG.Width = 90;
             // 
             // DONGIA
             // 
             this.DONGIA.Caption = "ĐƠN GIÁ";
+            this.DONGIA.DisplayFormat.FormatString = "n0";
+            this.DONGIA.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.DONGIA.FieldName = "DONGIA";
             this.DONGIA.Name = "DONGIA";
             this.DONGIA.Visible = true;
             this.DONGIA.VisibleIndex = 5;
-            this.DONGIA.Width = 100;
+            this.DONGIA.Width = 90;
             // 
             // THANHTIEN
             // 
             this.THANHTIEN.Caption = "THÀNH TIỀN";
+            this.THANHTIEN.DisplayFormat.FormatString = "n0";
+            this.THANHTIEN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.THANHTIEN.FieldName = "THANHTIEN";
             this.THANHTIEN.Name = "THANHTIEN";
             this.THANHTIEN.Visible = true;
             this.THANHTIEN.VisibleIndex = 6;
-            this.THANHTIEN.Width = 100;
+            this.THANHTIEN.Width = 454;
             // 
             // FormChuanDoanDieuTri
             // 
