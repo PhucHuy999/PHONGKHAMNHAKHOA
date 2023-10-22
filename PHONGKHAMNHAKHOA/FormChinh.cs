@@ -83,5 +83,10 @@ namespace PHONGKHAMNHAKHOA.GUI
             openForm(typeof(FormLoaiThuoc));
 
         }
+
+        private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(FormThanhToann));
+        }
     }
 }
