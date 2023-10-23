@@ -13,19 +13,21 @@ using System.Windows.Forms;
 
 namespace PHONGKHAMNHAKHOA.GUI
 {
-    public partial class FormThanhToann : DevExpress.XtraEditors.XtraForm
+    public partial class FormTHANHTOAN : DevExpress.XtraEditors.XtraForm
     {
         BenhNhan _benhnhan;
-        public FormThanhToann()
+
+        public FormTHANHTOAN()
         {
             InitializeComponent();
         }
 
-        private void FormThanhToann_Load(object sender, EventArgs e)
+        private void FormTHANHTOAN_Load(object sender, EventArgs e)
         {
-            loadComBoBenhNhan();
+            _benhnhan = new BenhNhan();
+            loadComBo();
         }
-        void loadComBoBenhNhan()
+        void loadComBo()
         {
             slkBenhNhan.Properties.DataSource = _benhnhan.GetAll();
             slkBenhNhan.Properties.ValueMember = "MABN";

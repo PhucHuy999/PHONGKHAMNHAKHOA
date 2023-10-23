@@ -118,6 +118,7 @@
             this.btnSaoLuuDuLieu.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaoLuuDuLieu.ImageOptions.SvgImage")));
             this.btnSaoLuuDuLieu.Name = "btnSaoLuuDuLieu";
             this.btnSaoLuuDuLieu.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnSaoLuuDuLieu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSaoLuuDuLieu_ItemClick);
             // 
             // btnKhoiPhucDuLieu
             // 
@@ -126,6 +127,7 @@
             this.btnKhoiPhucDuLieu.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnKhoiPhucDuLieu.ImageOptions.SvgImage")));
             this.btnKhoiPhucDuLieu.Name = "btnKhoiPhucDuLieu";
             this.btnKhoiPhucDuLieu.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnKhoiPhucDuLieu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnKhoiPhucDuLieu_ItemClick);
             // 
             // btnThoat
             // 

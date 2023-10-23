@@ -64,7 +64,6 @@
     <Compile Include="LoaiDieuTri.cs" />
     <Compile Include="LoaiThuoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThanhToan.cs" />
     <Compile Include="ThongTinCanLamSang.cs" />
     <Compile Include="ThongTinLamSang.cs" />
   </ItemGroup>

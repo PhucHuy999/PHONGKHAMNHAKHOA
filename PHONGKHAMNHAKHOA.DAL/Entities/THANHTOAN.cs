@@ -26,6 +26,7 @@ namespace PHONGKHAMNHAKHOA.DAL.Entities
 
         [StringLength(100)]
         public string GHICHU { get; set; }
+        public string TONGPHAITHANHTOAN { get; set; }
         public virtual CHUANDOAN_DIEUTRI CHUANDOAN_DIEUTRI { get; set; }
 
         public virtual THONGTINBENHNHAN THONGTINBENHNHAN { get; set; }
