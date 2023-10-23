@@ -58,6 +58,11 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtIDNguoiDung = new System.Windows.Forms.Label();
+            this.txtTenNguoiDung = new System.Windows.Forms.Label();
+            this.btnDangXuat = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -92,7 +97,7 @@
             this.ribbonPage1,
             this.ribbonPage2,
             this.ribbonPage3});
-            this.ribbon.Size = new System.Drawing.Size(1251, 158);
+            this.ribbon.Size = new System.Drawing.Size(1908, 158);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // btnDoiMatKhau
@@ -102,6 +107,7 @@
             this.btnDoiMatKhau.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDoiMatKhau.ImageOptions.SvgImage")));
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
             this.btnDoiMatKhau.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnDoiMatKhau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDoiMatKhau_ItemClick);
             // 
             // btnTaoTaiKhoan
             // 
@@ -110,6 +116,7 @@
             this.btnTaoTaiKhoan.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnTaoTaiKhoan.ImageOptions.SvgImage")));
             this.btnTaoTaiKhoan.Name = "btnTaoTaiKhoan";
             this.btnTaoTaiKhoan.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnTaoTaiKhoan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTaoTaiKhoan_ItemClick);
             // 
             // btnSaoLuuDuLieu
             // 
@@ -299,10 +306,10 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 591);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 966);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1251, 24);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1908, 24);
             // 
             // documentManager1
             // 
@@ -312,11 +319,64 @@
             this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView1});
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1441, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(18, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "ID";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(1397, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Người dùng";
+            // 
+            // txtIDNguoiDung
+            // 
+            this.txtIDNguoiDung.AutoSize = true;
+            this.txtIDNguoiDung.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtIDNguoiDung.Location = new System.Drawing.Point(1463, 23);
+            this.txtIDNguoiDung.Name = "txtIDNguoiDung";
+            this.txtIDNguoiDung.Size = new System.Drawing.Size(43, 13);
+            this.txtIDNguoiDung.TabIndex = 5;
+            this.txtIDNguoiDung.Text = "            ";
+            // 
+            // txtTenNguoiDung
+            // 
+            this.txtTenNguoiDung.AutoSize = true;
+            this.txtTenNguoiDung.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtTenNguoiDung.Location = new System.Drawing.Point(1463, 40);
+            this.txtTenNguoiDung.Name = "txtTenNguoiDung";
+            this.txtTenNguoiDung.Size = new System.Drawing.Size(118, 13);
+            this.txtTenNguoiDung.TabIndex = 6;
+            this.txtTenNguoiDung.Text = "                                     ";
+            // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.ImageOptions.Image")));
+            this.btnDangXuat.Location = new System.Drawing.Point(1587, 30);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(75, 23);
+            this.btnDangXuat.TabIndex = 7;
+            this.btnDangXuat.Text = "Đăng xuất";
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            // 
             // FormChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1251, 615);
+            this.ClientSize = new System.Drawing.Size(1908, 990);
+            this.Controls.Add(this.btnDangXuat);
+            this.Controls.Add(this.txtTenNguoiDung);
+            this.Controls.Add(this.txtIDNguoiDung);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IsMdiContainer = true;
@@ -365,5 +425,10 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.BarButtonItem btnDonThuoc;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
+        private DevExpress.XtraEditors.SimpleButton btnDangXuat;
+        private System.Windows.Forms.Label txtTenNguoiDung;
+        private System.Windows.Forms.Label txtIDNguoiDung;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -91,5 +91,6 @@ namespace PHONGKHAMNHAKHOA.GUI
                 txtPass.PasswordChar = '*';
             }
         }
+
     }
 }

@@ -36,6 +36,8 @@ namespace PHONGKHAMNHAKHOA.GUI
         private void FormChinh_Load(object sender, EventArgs e)
         {
             ribbon.SelectedPage = ribbonPage2; //set khi load hiển thị lên ribbonPage2(Bệnh Nhân) trước.
+            txtTenNguoiDung.Text = FULLNAME;
+            txtIDNguoiDung.Text = IDUSER;
         }
         void openForm(Type typeForm) ///// Đoạn này thiết lập openform cho nó không bị mở thêm form mới khi click vào button mà khi form đã mở 
         {
@@ -85,10 +87,39 @@ namespace PHONGKHAMNHAKHOA.GUI
             openForm(typeof(FormDonThuoc));
         }
 
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn đăng xuất?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+
+                FormDangNhap lg = new FormDangNhap();
+                this.Hide();
+                lg.ShowDialog();
+            }
+        }
+
+        private void btnDoiMatKhau_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormDoiMatKhau frm = new FormDoiMatKhau();
+            frm.ShowDialog();
+        }
+
+        private void btnTaoTaiKhoan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (QUYEN == "Admin")
+            {
+                FormTaoTaiKhoan frm = new FormTaoTaiKhoan();
+                frm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không được quyền sử dụng tính năng này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
         private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
         {
             openForm(typeof(FormLoaiThuoc));
-
         }
 
         private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
@@ -98,14 +129,30 @@ namespace PHONGKHAMNHAKHOA.GUI
 
         private void btnSaoLuuDuLieu_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FormSaoLuuDuLieu frm = new FormSaoLuuDuLieu();
-            frm.ShowDialog();
+            if (QUYEN == "Admin")
+            {
+                FormSaoLuuDuLieu frm = new FormSaoLuuDuLieu();
+                frm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không được quyền sử dụng tính năng này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
 
         private void btnKhoiPhucDuLieu_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FormKhoiPhucDuLieu frm = new FormKhoiPhucDuLieu();
-            frm.ShowDialog();
+            if (QUYEN == "Admin")
+            {
+                FormKhoiPhucDuLieu frm = new FormKhoiPhucDuLieu();
+                frm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không được quyền sử dụng tính năng này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
     }
 }
