@@ -8,6 +8,8 @@ namespace PHONGKHAMNHAKHOA.GUI
 {
     internal static class Program
     {
+        public static int UserId { get; set; }
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +18,7 @@ namespace PHONGKHAMNHAKHOA.GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormChinh());
+            Application.Run(new FormDangNhap());
         }
     }
 }

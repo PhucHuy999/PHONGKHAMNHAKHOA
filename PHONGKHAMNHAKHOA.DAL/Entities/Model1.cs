@@ -17,6 +17,7 @@ namespace PHONGKHAMNHAKHOA.DAL.Entities
         public virtual DbSet<LOAIDIEUTRI> LOAIDIEUTRI { get; set; }
         public virtual DbSet<LOAITHUOC> LOAITHUOC { get; set; }
         public virtual DbSet<NHAPXUAT_DCVLNK> NHAPXUAT_DCVLNK { get; set; }
+        public virtual DbSet<tb_User> tb_User { get; set; }
         public virtual DbSet<THANHTOAN> THANHTOAN { get; set; }
         public virtual DbSet<THONGTINBENHNHAN> THONGTINBENHNHAN { get; set; }
         public virtual DbSet<THONGTINCANLAMSANG> THONGTINCANLAMSANG { get; set; }

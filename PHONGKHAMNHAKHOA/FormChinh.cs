@@ -14,9 +14,16 @@ namespace PHONGKHAMNHAKHOA.GUI
 {
     public partial class FormChinh : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public FormChinh()
+        string IDUSER = "", USERNAME = "", FULLNAME = "", PASS = "", QUYEN = "";
+
+        public FormChinh(string IDUSER, string USERNAME, string FULLNAME, string PASS, string QUYEN)
         {
             InitializeComponent();
+            this.IDUSER = IDUSER;
+            this.USERNAME = USERNAME;
+            this.FULLNAME = FULLNAME;
+            this.PASS = PASS;
+            this.QUYEN = QUYEN;
         }
 
         private void btnThoat_ItemClick(object sender, ItemClickEventArgs e)

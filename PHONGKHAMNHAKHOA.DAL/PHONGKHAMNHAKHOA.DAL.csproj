@@ -62,6 +62,7 @@
     <Compile Include="Entities\LOAITHUOC.cs" />
     <Compile Include="Entities\Model1.cs" />
     <Compile Include="Entities\NHAPXUAT_DCVLNK.cs" />
+    <Compile Include="Entities\tb_User.cs" />
     <Compile Include="Entities\THANHTOAN.cs" />
     <Compile Include="Entities\THONGTINBENHNHAN.cs" />
     <Compile Include="Entities\THONGTINCANLAMSANG.cs" />

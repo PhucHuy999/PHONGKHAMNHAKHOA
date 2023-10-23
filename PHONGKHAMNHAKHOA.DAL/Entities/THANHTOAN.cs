@@ -13,6 +13,7 @@ namespace PHONGKHAMNHAKHOA.DAL.Entities
         [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MABN { get; set; }
+
         [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -26,7 +27,9 @@ namespace PHONGKHAMNHAKHOA.DAL.Entities
 
         [StringLength(100)]
         public string GHICHU { get; set; }
-        public string TONGPHAITHANHTOAN { get; set; }
+
+        public double? TONGPHAITHANHTOAN { get; set; }
+
         public virtual CHUANDOAN_DIEUTRI CHUANDOAN_DIEUTRI { get; set; }
 
         public virtual THONGTINBENHNHAN THONGTINBENHNHAN { get; set; }
