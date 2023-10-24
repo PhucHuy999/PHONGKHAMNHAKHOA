@@ -29,11 +29,6 @@ namespace PHONGKHAMNHAKHOA.DAL.Entities
                 .Property(e => e.SOLUONG)
                 .IsFixedLength();
 
-            modelBuilder.Entity<CHUANDOAN_DIEUTRI>()
-                .HasMany(e => e.THANHTOAN)
-                .WithRequired(e => e.CHUANDOAN_DIEUTRI)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<DONTHUOC>()
                 .Property(e => e.SOLUONG)
                 .IsFixedLength();
@@ -46,11 +41,6 @@ namespace PHONGKHAMNHAKHOA.DAL.Entities
                 .Property(e => e.DIENTHOAI)
                 .IsFixedLength()
                 .IsUnicode(false);
-
-            modelBuilder.Entity<THONGTINBENHNHAN>()
-                .HasMany(e => e.THANHTOAN)
-                .WithRequired(e => e.THONGTINBENHNHAN)
-                .WillCascadeOnDelete(false);
         }
     }
 }

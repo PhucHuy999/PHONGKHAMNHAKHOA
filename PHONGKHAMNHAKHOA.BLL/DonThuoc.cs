@@ -20,6 +20,7 @@ namespace PHONGKHAMNHAKHOA.BLL
         {
             return db.DONTHUOC.FirstOrDefault(x => x.MADT == id);
         }
+        
         public List<DONTHUOC_FULL> GetListFull()
         {
             var AA = db.DONTHUOC.ToList();

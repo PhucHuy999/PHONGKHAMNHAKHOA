@@ -60,11 +60,13 @@
     <Compile Include="Encryption.cs" />
     <Compile Include="FULL\CHUANDOANDIEUTRI_FULL.cs" />
     <Compile Include="FULL\DONTHUOC_FULL.cs" />
+    <Compile Include="FULL\THANHTOAN_FULL.cs" />
     <Compile Include="FULL\THONGTINCANLAMSANG_FULL.cs" />
     <Compile Include="FULL\THONGTINLAMSANG_FULL.cs" />
     <Compile Include="LoaiDieuTri.cs" />
     <Compile Include="LoaiThuoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThanhToan.cs" />
     <Compile Include="ThongTinCanLamSang.cs" />
     <Compile Include="ThongTinLamSang.cs" />
     <Compile Include="USERS.cs" />

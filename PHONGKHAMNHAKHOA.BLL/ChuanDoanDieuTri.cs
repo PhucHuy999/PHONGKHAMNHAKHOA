@@ -45,6 +45,7 @@ namespace PHONGKHAMNHAKHOA.BLL
             }
             return BB;
         }
+        
         public CHUANDOAN_DIEUTRI Add(CHUANDOAN_DIEUTRI cddt)
         {
             try

@@ -124,7 +124,8 @@ namespace PHONGKHAMNHAKHOA.GUI
 
         private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
         {
-            openForm(typeof(FormTHANHTOAN));
+            FormTHANHTOAN frm = new FormTHANHTOAN();
+            frm.ShowDialog();
         }
 
         private void btnSaoLuuDuLieu_ItemClick(object sender, ItemClickEventArgs e)

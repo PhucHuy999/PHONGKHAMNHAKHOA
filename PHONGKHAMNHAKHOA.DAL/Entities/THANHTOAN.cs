@@ -10,14 +10,11 @@ namespace PHONGKHAMNHAKHOA.DAL.Entities
     public partial class THANHTOAN
     {
         [Key]
-        [Column(Order = 0)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int MABN { get; set; }
+        public int MATHANHTOAN { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int MACDDC { get; set; }
+        public int? MABN { get; set; }
+
+        public int? MACDDC { get; set; }
 
         public DateTime? NGAYTHANHTOAN { get; set; }
 
