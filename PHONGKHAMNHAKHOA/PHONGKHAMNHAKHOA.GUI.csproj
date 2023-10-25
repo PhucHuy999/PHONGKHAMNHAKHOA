@@ -178,6 +178,12 @@
     <Compile Include="FormThongTinLamSang.Designer.cs">
       <DependentUpon>FormThongTinLamSang.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormXuatDungCuVatTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXuatDungCuVatTu.Designer.cs">
+      <DependentUpon>FormXuatDungCuVatTu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reports\rptInDonThuoc.cs">
@@ -239,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormThongTinLamSang.resx">
       <DependentUpon>FormThongTinLamSang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXuatDungCuVatTu.resx">
+      <DependentUpon>FormXuatDungCuVatTu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
