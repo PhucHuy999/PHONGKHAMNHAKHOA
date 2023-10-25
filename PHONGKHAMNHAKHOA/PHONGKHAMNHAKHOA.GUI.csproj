@@ -142,6 +142,12 @@
     <Compile Include="FormLoaiThuoc.Designer.cs">
       <DependentUpon>FormLoaiThuoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNhapDungCuVatLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNhapDungCuVatLieu.Designer.cs">
+      <DependentUpon>FormNhapDungCuVatLieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSaoLuuDuLieu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLoaiThuoc.resx">
       <DependentUpon>FormLoaiThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNhapDungCuVatLieu.resx">
+      <DependentUpon>FormNhapDungCuVatLieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSaoLuuDuLieu.resx">
       <DependentUpon>FormSaoLuuDuLieu.cs</DependentUpon>

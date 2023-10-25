@@ -117,6 +117,11 @@ namespace PHONGKHAMNHAKHOA.GUI
             }
         }
 
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(FormNhapDungCuVatLieu));
+        }
+
         private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
         {
             openForm(typeof(FormLoaiThuoc));

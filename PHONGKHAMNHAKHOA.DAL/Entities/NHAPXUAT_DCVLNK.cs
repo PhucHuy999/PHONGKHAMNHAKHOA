@@ -12,7 +12,7 @@ namespace PHONGKHAMNHAKHOA.DAL.Entities
         public string ID { get; set; }
 
         [StringLength(200)]
-        public string NOIDUNG { get; set; }
+        public string TENDCVL { get; set; }
 
         [StringLength(50)]
         public string DONVITINH { get; set; }
@@ -25,5 +25,10 @@ namespace PHONGKHAMNHAKHOA.DAL.Entities
         public double? THANHTIEN { get; set; }
 
         public int? LOAI { get; set; }
+
+        public DateTime? NGAY { get; set; }
+
+        [StringLength(200)]
+        public string NOIDUNG { get; set; }
     }
 }
