@@ -27,6 +27,7 @@ namespace PHONGKHAMNHAKHOA.GUI
         List<THANHTOAN_FULL> _lstTT;
         bool _them;
         int _id;
+        int _idbn;
 
         public FormTHANHTOAN()
         {
@@ -136,7 +137,7 @@ namespace PHONGKHAMNHAKHOA.GUI
 
         private void btnIn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            _lstTT = _thanhtoan.getItemFull(_id);
+            _lstTT = _thanhtoan.getItemFull(_idbn);
             rptInHoaDon rpt = new rptInHoaDon(_lstTT);
             rpt.ShowPreviewDialog();
         }
@@ -164,7 +165,7 @@ namespace PHONGKHAMNHAKHOA.GUI
                     // DONTHUOC
                     var duLieuDaLocDonThuoc = _dt.GetListFull()
                         .Where(item => item.MABN == idBenhNhanDaChon)
-                        .Select(item => new { TÊN_LOẠI_THUỐC = item.TENLOAITHUOC, THÀNH_TIỀN = Convert.ToDouble(item.THANHTIEN).ToString("N0") })
+                        .Select(item => new { TÊN_LOẠI_THUỐC = item.TENLOAITHUOC, THÀNH_TIỀN = Convert.ToDouble(item.THANHTIENTHUOC).ToString("N0") })
                         .ToList();
 
                     // Kiểm tra nếu danh sách rỗng, thêm giá trị 0
@@ -252,6 +253,8 @@ namespace PHONGKHAMNHAKHOA.GUI
             if (gvDanhSach.RowCount > 0)
             {
                 _id = int.Parse(gvDanhSach.GetFocusedRowCellValue("MATHANHTOAN").ToString());
+                _idbn = int.Parse(gvDanhSach.GetFocusedRowCellValue("MABN").ToString());
+                _lstTT = _thanhtoan.getItemFull(_idbn);
 
                 var tt = _thanhtoan.GetItem(_id);
                 dtNgayThanhToan.Value = tt.NGAYTHANHTOAN.Value;
@@ -259,11 +262,9 @@ namespace PHONGKHAMNHAKHOA.GUI
                 txtSoTienConLai.Text = tt.SOTIENCONLAI.Value.ToString("N0");
                 txtGhiChu.Text = tt.GHICHU;
                 txtTongPhaiThanhToan.Text = tt.TONGPHAITHANHTOAN.Value.ToString("N0");
-
                 txtMaCDDT.Text = tt.MACDDC.ToString();
                 slkBenhNhan.EditValue = tt.MABN;
 
-                _lstTT = _thanhtoan.getItemFull(_id);
             }
         }
         private void SaveData()

@@ -174,6 +174,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\rptInDonThuoc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptInDonThuoc.Designer.cs">
+      <DependentUpon>rptInDonThuoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\rptInHoaDon.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -236,6 +242,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\rptInDonThuoc.resx">
+      <DependentUpon>rptInDonThuoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptInHoaDon.resx">
       <DependentUpon>rptInHoaDon.cs</DependentUpon>
     </EmbeddedResource>

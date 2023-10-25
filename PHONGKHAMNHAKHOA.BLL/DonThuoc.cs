@@ -30,10 +30,12 @@ namespace PHONGKHAMNHAKHOA.BLL
             {
                 dtDTO = new DONTHUOC_FULL();
                 dtDTO.MADT = item.MADT;
-                dtDTO.DONVITINH = item.DONVITINHTHUOC;
-                dtDTO.SOLUONG = item.SOLUONGTHUOC;
-                dtDTO.DONGIA = item.DONGIATHUOC;
-                dtDTO.THANHTIEN = item.THANHTIENTHUOC;
+                dtDTO.DONVITINHTHUOC = item.DONVITINHTHUOC;
+                dtDTO.SOLUONGTHUOC = item.SOLUONGTHUOC;
+                dtDTO.DONGIATHUOC = item.DONGIATHUOC;
+                dtDTO.THANHTIENTHUOC = item.THANHTIENTHUOC;
+                dtDTO.CACHDUNG = item.CACHDUNG;
+                dtDTO.NGAY = item.NGAY.Value.ToString("dd/MM/yyyy");
 
                 dtDTO.MALOAITHUOC = item.MALOAITHUOC;
                 var dt = db.LOAITHUOC.FirstOrDefault(c => c.MALOAITHUOC == item.MALOAITHUOC);// để lấy được tên loại điều trị
@@ -46,6 +48,40 @@ namespace PHONGKHAMNHAKHOA.BLL
                 BB.Add(dtDTO);
             }
             return BB;
+        }
+        public List<DONTHUOC_FULL> getItemFull(int id) // đưa về list 1 phần tử mới rpt mới nhận đậu xanh :v
+        {
+            List<DONTHUOC> lstDT = db.DONTHUOC.Where(x => x.MABN == id).ToList();
+            List<DONTHUOC_FULL> lstDTO = new List<DONTHUOC_FULL>();
+            DONTHUOC_FULL dt;
+            foreach (var item in lstDT)
+            {
+                dt = new DONTHUOC_FULL();
+                dt.MADT = item.MADT;
+                dt.NGAY = item.NGAY.Value.ToString("dd/MM/yyyy");
+                dt.MALOAITHUOC = item.MALOAITHUOC;
+                dt.DONVITINHTHUOC = item.DONVITINHTHUOC;
+                dt.SOLUONGTHUOC = item.SOLUONGTHUOC;
+                dt.DONGIATHUOC = item.DONGIATHUOC;
+                dt.THANHTIENTHUOC = item.THANHTIENTHUOC;
+                dt.CACHDUNG = item.CACHDUNG;
+                dt.TENLOAITHUOC = item.LOAITHUOC.TENLOAITHUOC;
+                dt.MABN = item.MABN;
+
+                //var nv = db.THONGTINBENHNHAN.FirstOrDefault(bn => bn.MABN == item.MABN);
+                dt.HOTEN = item.THONGTINBENHNHAN.HOTEN;
+                dt.GIOITINH = item.THONGTINBENHNHAN.GIOITINH;
+                dt.NGAYSINH = item.THONGTINBENHNHAN.NGAYSINH.Value.ToString("dd/MM/yyyy");
+                dt.NGAYKHAMDAUTIEN = item.THONGTINBENHNHAN.NGAYKHAMDAUTIEN.Value.ToString("dd/MM/yyyy");
+                dt.DIENTHOAI = item.THONGTINBENHNHAN.DIENTHOAI;
+                dt.DIACHI = item.THONGTINBENHNHAN.DIACHI;
+
+                
+
+                lstDTO.Add(dt);
+
+            }
+            return lstDTO;
         }
         public DONTHUOC Add(DONTHUOC dt)
         {
@@ -70,6 +106,9 @@ namespace PHONGKHAMNHAKHOA.BLL
                 _dt.SOLUONGTHUOC = dt.SOLUONGTHUOC;
                 _dt.DONGIATHUOC = dt.DONGIATHUOC;
                 _dt.THANHTIENTHUOC = dt.THANHTIENTHUOC;
+                _dt.NGAY = dt.NGAY;
+                _dt.CACHDUNG = dt.CACHDUNG;
+
                 _dt.MABN = dt.MABN;
 
                 db.SaveChanges();

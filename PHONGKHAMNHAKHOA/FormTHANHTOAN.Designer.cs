@@ -70,7 +70,7 @@
             this.HOTEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcDanhSach = new DevExpress.XtraGrid.GridControl();
             this.gvDanhSach = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colMATHANHTOAN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMABN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHOTEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTENDIEUTRI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTENLOAITHUOC = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -79,6 +79,7 @@
             this.SOTIENDATHANHTOAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SOTIENCONLAI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GHICHU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MATHANHTOAN = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -492,7 +493,7 @@
             // gvDanhSach
             // 
             this.gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMATHANHTOAN,
+            this.colMABN,
             this.colHOTEN,
             this.colTENDIEUTRI,
             this.colTENLOAITHUOC,
@@ -500,26 +501,27 @@
             this.TONGPHAITHANHTOAN,
             this.SOTIENDATHANHTOAN,
             this.SOTIENCONLAI,
-            this.GHICHU});
+            this.GHICHU,
+            this.MATHANHTOAN});
             this.gvDanhSach.GridControl = this.gcDanhSach;
             this.gvDanhSach.Name = "gvDanhSach";
             this.gvDanhSach.OptionsView.ShowGroupPanel = false;
             this.gvDanhSach.Click += new System.EventHandler(this.gvDanhSach_Click);
             // 
-            // colMATHANHTOAN
+            // colMABN
             // 
-            this.colMATHANHTOAN.AppearanceCell.Options.UseTextOptions = true;
-            this.colMATHANHTOAN.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colMATHANHTOAN.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.colMATHANHTOAN.AppearanceHeader.Options.UseFont = true;
-            this.colMATHANHTOAN.Caption = "MÃTT";
-            this.colMATHANHTOAN.FieldName = "MATHANHTOAN";
-            this.colMATHANHTOAN.MaxWidth = 50;
-            this.colMATHANHTOAN.MinWidth = 50;
-            this.colMATHANHTOAN.Name = "colMATHANHTOAN";
-            this.colMATHANHTOAN.Visible = true;
-            this.colMATHANHTOAN.VisibleIndex = 0;
-            this.colMATHANHTOAN.Width = 50;
+            this.colMABN.AppearanceCell.Options.UseTextOptions = true;
+            this.colMABN.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colMABN.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.colMABN.AppearanceHeader.Options.UseFont = true;
+            this.colMABN.Caption = "MÃ BN";
+            this.colMABN.FieldName = "MABN";
+            this.colMABN.MaxWidth = 50;
+            this.colMABN.MinWidth = 50;
+            this.colMABN.Name = "colMABN";
+            this.colMABN.Visible = true;
+            this.colMABN.VisibleIndex = 1;
+            this.colMABN.Width = 50;
             // 
             // colHOTEN
             // 
@@ -531,7 +533,7 @@
             this.colHOTEN.MinWidth = 200;
             this.colHOTEN.Name = "colHOTEN";
             this.colHOTEN.Visible = true;
-            this.colHOTEN.VisibleIndex = 1;
+            this.colHOTEN.VisibleIndex = 2;
             this.colHOTEN.Width = 200;
             // 
             // colTENDIEUTRI
@@ -544,7 +546,7 @@
             this.colTENDIEUTRI.MinWidth = 200;
             this.colTENDIEUTRI.Name = "colTENDIEUTRI";
             this.colTENDIEUTRI.Visible = true;
-            this.colTENDIEUTRI.VisibleIndex = 2;
+            this.colTENDIEUTRI.VisibleIndex = 3;
             this.colTENDIEUTRI.Width = 200;
             // 
             // colTENLOAITHUOC
@@ -557,7 +559,7 @@
             this.colTENLOAITHUOC.MinWidth = 210;
             this.colTENLOAITHUOC.Name = "colTENLOAITHUOC";
             this.colTENLOAITHUOC.Visible = true;
-            this.colTENLOAITHUOC.VisibleIndex = 3;
+            this.colTENLOAITHUOC.VisibleIndex = 4;
             this.colTENLOAITHUOC.Width = 210;
             // 
             // NGAYTHANHTOAN
@@ -570,7 +572,7 @@
             this.NGAYTHANHTOAN.MinWidth = 113;
             this.NGAYTHANHTOAN.Name = "NGAYTHANHTOAN";
             this.NGAYTHANHTOAN.Visible = true;
-            this.NGAYTHANHTOAN.VisibleIndex = 4;
+            this.NGAYTHANHTOAN.VisibleIndex = 5;
             this.NGAYTHANHTOAN.Width = 113;
             // 
             // TONGPHAITHANHTOAN
@@ -585,7 +587,7 @@
             this.TONGPHAITHANHTOAN.MinWidth = 90;
             this.TONGPHAITHANHTOAN.Name = "TONGPHAITHANHTOAN";
             this.TONGPHAITHANHTOAN.Visible = true;
-            this.TONGPHAITHANHTOAN.VisibleIndex = 5;
+            this.TONGPHAITHANHTOAN.VisibleIndex = 6;
             this.TONGPHAITHANHTOAN.Width = 90;
             // 
             // SOTIENDATHANHTOAN
@@ -600,7 +602,7 @@
             this.SOTIENDATHANHTOAN.MinWidth = 90;
             this.SOTIENDATHANHTOAN.Name = "SOTIENDATHANHTOAN";
             this.SOTIENDATHANHTOAN.Visible = true;
-            this.SOTIENDATHANHTOAN.VisibleIndex = 6;
+            this.SOTIENDATHANHTOAN.VisibleIndex = 7;
             this.SOTIENDATHANHTOAN.Width = 90;
             // 
             // SOTIENCONLAI
@@ -615,7 +617,7 @@
             this.SOTIENCONLAI.MinWidth = 90;
             this.SOTIENCONLAI.Name = "SOTIENCONLAI";
             this.SOTIENCONLAI.Visible = true;
-            this.SOTIENCONLAI.VisibleIndex = 7;
+            this.SOTIENCONLAI.VisibleIndex = 8;
             this.SOTIENCONLAI.Width = 90;
             // 
             // GHICHU
@@ -626,8 +628,21 @@
             this.GHICHU.FieldName = "GHICHU";
             this.GHICHU.Name = "GHICHU";
             this.GHICHU.Visible = true;
-            this.GHICHU.VisibleIndex = 8;
+            this.GHICHU.VisibleIndex = 9;
             this.GHICHU.Width = 499;
+            // 
+            // MATHANHTOAN
+            // 
+            this.MATHANHTOAN.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.MATHANHTOAN.AppearanceHeader.Options.UseFont = true;
+            this.MATHANHTOAN.Caption = "MÃ TT";
+            this.MATHANHTOAN.FieldName = "MATHANHTOAN";
+            this.MATHANHTOAN.MaxWidth = 50;
+            this.MATHANHTOAN.MinWidth = 50;
+            this.MATHANHTOAN.Name = "MATHANHTOAN";
+            this.MATHANHTOAN.Visible = true;
+            this.MATHANHTOAN.VisibleIndex = 0;
+            this.MATHANHTOAN.Width = 50;
             // 
             // FormTHANHTOAN
             // 
@@ -681,7 +696,7 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private DevExpress.XtraGrid.GridControl gcDanhSach;
         private DevExpress.XtraGrid.Views.Grid.GridView gvDanhSach;
-        private DevExpress.XtraGrid.Columns.GridColumn colMATHANHTOAN;
+        private DevExpress.XtraGrid.Columns.GridColumn colMABN;
         private DevExpress.XtraGrid.Columns.GridColumn colHOTEN;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
@@ -712,5 +727,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtMaCDDT;
         private System.Windows.Forms.DateTimePicker dtNgayThanhToan;
+        private DevExpress.XtraGrid.Columns.GridColumn MATHANHTOAN;
     }
 }

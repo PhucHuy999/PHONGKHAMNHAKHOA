@@ -11,6 +11,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PHONGKHAMNHAKHOA.DAL.Entities;
+using PHONGKHAMNHAKHOA.GUI.Reports;
+using DevExpress.XtraReports.UI;
 
 namespace PHONGKHAMNHAKHOA.GUI
 {
@@ -22,6 +24,7 @@ namespace PHONGKHAMNHAKHOA.GUI
         List<DONTHUOC_FULL> _lstdt;
         bool _them;
         int _id;
+        int _idbn;
         public FormDonThuoc()
         {
             InitializeComponent();
@@ -53,6 +56,8 @@ namespace PHONGKHAMNHAKHOA.GUI
             txtDonViTinh.Text = string.Empty;
             txtSoLuong.Text = string.Empty;
             txtDonGia.Text = string.Empty;
+            dtNgay.Text = string.Empty;
+            txtCachDung.Text = string.Empty;
             txtThanhTien.Text = string.Empty;
             slkLoaiThuoc.Text = string.Empty;
             slkBenhNhan.Text = string.Empty;
@@ -80,12 +85,15 @@ namespace PHONGKHAMNHAKHOA.GUI
             txtSoLuong.Enabled = !kt;
             txtDonGia.Enabled = !kt;
             txtThanhTien.Enabled = !kt;
+            dtNgay.Enabled = !kt;
+            txtCachDung.Enabled = !kt;
         }
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             _showHide(false);
             _them = true;
             _reset();
+            txtCachDung.Text = "Một ngày uống 2 lần, mỗi lần 1 viên.Sau khi ăn";
         }
 
         private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -120,7 +128,9 @@ namespace PHONGKHAMNHAKHOA.GUI
 
         private void btnIn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            _lstdt = _dt.getItemFull(_idbn);
+            rptInDonThuoc rpt = new rptInDonThuoc(_lstdt);
+            rpt.ShowPreviewDialog();
         }
 
         private void btnDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -133,14 +143,22 @@ namespace PHONGKHAMNHAKHOA.GUI
             if (gvDanhSach.RowCount > 0)
             {
                 _id = int.Parse(gvDanhSach.GetFocusedRowCellValue("MADT").ToString());
+                _idbn = int.Parse(gvDanhSach.GetFocusedRowCellValue("MABN").ToString());
+                _lstdt = _dt.getItemFull(_idbn);
+                
                 var cddt = _dt.GetItem(_id);
                 txtDonViTinh.Text = cddt.DONVITINHTHUOC;
                 txtSoLuong.Text = cddt.SOLUONGTHUOC;
                 txtDonGia.Text = cddt.DONGIATHUOC.ToString();
                 txtThanhTien.Text = cddt.THANHTIENTHUOC.ToString();
+                txtCachDung.Text = cddt.CACHDUNG;
+                dtNgay.Value = cddt.NGAY.Value;
 
                 slkLoaiThuoc.EditValue = cddt.MALOAITHUOC;
                 slkBenhNhan.EditValue = cddt.MABN;
+
+               
+
             }
         }
         private void SaveData()
@@ -152,6 +170,8 @@ namespace PHONGKHAMNHAKHOA.GUI
                 dt.SOLUONGTHUOC = txtSoLuong.Text;
                 dt.DONGIATHUOC = double.Parse(txtDonGia.EditValue.ToString());
                 dt.THANHTIENTHUOC = double.Parse(txtThanhTien.EditValue.ToString());
+                dt.NGAY = dtNgay.Value;
+                dt.CACHDUNG = txtCachDung.Text;
 
                 dt.MALOAITHUOC = int.Parse(slkLoaiThuoc.EditValue.ToString());
                 dt.MABN = int.Parse(slkBenhNhan.EditValue.ToString());
@@ -165,6 +185,8 @@ namespace PHONGKHAMNHAKHOA.GUI
                 dt.SOLUONGTHUOC = txtSoLuong.Text;
                 dt.DONGIATHUOC = double.Parse(txtDonGia.EditValue.ToString());
                 dt.THANHTIENTHUOC = double.Parse(txtThanhTien.EditValue.ToString());
+                dt.NGAY = dtNgay.Value;
+                dt.CACHDUNG = txtCachDung.Text;
 
                 dt.MALOAITHUOC = int.Parse(slkLoaiThuoc.EditValue.ToString());
                 dt.MABN = int.Parse(slkBenhNhan.EditValue.ToString());

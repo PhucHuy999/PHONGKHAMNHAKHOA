@@ -142,7 +142,7 @@
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable4});
-            this.Detail.HeightF = 25F;
+            this.Detail.HeightF = 25.18387F;
             this.Detail.Name = "Detail";
             // 
             // xrTable4
@@ -152,7 +152,7 @@
             this.xrTable4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable4.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow4});
-            this.xrTable4.SizeF = new System.Drawing.SizeF(650.0001F, 25F);
+            this.xrTable4.SizeF = new System.Drawing.SizeF(650.0001F, 25.18387F);
             // 
             // xrTableRow4
             // 
@@ -914,7 +914,6 @@
             // 
             this.bar1.BarName = "Tools";
             this.bar1.DockCol = 0;
-            this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar1.FloatLocation = new System.Drawing.Point(-2, -3);
             this.bar1.Text = "Tools";
             // 

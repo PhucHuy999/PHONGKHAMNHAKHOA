@@ -17,6 +17,7 @@ namespace PHONGKHAMNHAKHOA.BLL.FULL
         public string GHICHU { set; get; }
         public Nullable<bool> GIOITINH { get; set; }
         public string NGAYSINH { set; get; }
+        public string CACHDUNG { set; get; }
         public string NGAYKHAMDAUTIEN { set; get; }
         public string DIENTHOAI { set; get; }
         public string DIACHI { set; get; }

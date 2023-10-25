@@ -138,60 +138,37 @@ namespace PHONGKHAMNHAKHOA.BLL
         }
         public List<THANHTOAN_FULL> getItemFull(int id) // đưa về list 1 phần tử mới rpt mới nhận đậu xanh :v
         {
-            List<THANHTOAN> lsttt = db.THANHTOAN.Where(x => x.MATHANHTOAN == id).ToList();
+            List<THANHTOAN> lsttt = db.THANHTOAN.Where(x => x.MABN == id).ToList();
             List<THANHTOAN_FULL> lstTT = new List<THANHTOAN_FULL>();
             THANHTOAN_FULL tt;
             foreach (var item in lsttt)
             {
                 tt = new THANHTOAN_FULL();
+                tt.MABN = item.MABN;
                 tt.MATHANHTOAN = item.MATHANHTOAN;
+                tt.MACDDC = item.MACDDC;
                 tt.NGAYTHANHTOAN = item.NGAYTHANHTOAN.Value.ToString("dd/MM/yyyy");
-
                 tt.SOTIENDATHANHTOAN = item.SOTIENDATHANHTOAN;
                 tt.SOTIENCONLAI = item.SOTIENCONLAI;
                 tt.GHICHU = item.GHICHU;
                 tt.TONGPHAITHANHTOAN = item.TONGPHAITHANHTOAN;
-                tt.MABN = item.MABN;
-                tt.MACDDC = item.MACDDC;
 
-                var nv = db.THONGTINBENHNHAN.FirstOrDefault(bn => bn.MABN == item.MABN);
-                tt.HOTEN = nv.HOTEN;
-                tt.GIOITINH = nv.GIOITINH;
-                tt.NGAYSINH = nv.NGAYSINH.Value.ToString("dd/MM/yyyy");
-                tt.NGAYKHAMDAUTIEN = nv.NGAYKHAMDAUTIEN.Value.ToString("dd/MM/yyyy");
-                tt.DIENTHOAI = nv.DIENTHOAI;
-                tt.DIACHI = nv.DIACHI;
+                tt.HOTEN = item.THONGTINBENHNHAN.HOTEN;
+                tt.GIOITINH = item.THONGTINBENHNHAN.GIOITINH;
+                tt.NGAYSINH = item.THONGTINBENHNHAN.NGAYSINH.Value.ToString("dd/MM/yyyy");
+                tt.NGAYKHAMDAUTIEN = item.THONGTINBENHNHAN.NGAYKHAMDAUTIEN.Value.ToString("dd/MM/yyyy");
+                tt.DIENTHOAI = item.THONGTINBENHNHAN.DIENTHOAI;
+                tt.DIACHI = item.THONGTINBENHNHAN.DIACHI;
 
 
-                ////lấy điều trị
-                //var cddttInfo = db.CHUANDOAN_DIEUTRI
-                //  .Where(a => a.MABN == item.MABN)
-                //  .Select(a => new
-                //  {
-                //      TENDIEUTRI = a.LOAIDIEUTRI.TENDIEUTRI,
-                //      DONVITINH = a.DONVITINH,
-                //      SOLUONG = a.SOLUONG,
-                //      DONGIA = a.DONGIA,
-                //      THANHTIEN = a.THANHTIEN
-                //  })
-                //  .FirstOrDefault();
+                //var nv = db.THONGTINBENHNHAN.FirstOrDefault(bn => bn.MABN == item.MABN);
+                //tt.HOTEN = nv.HOTEN;
+                //tt.GIOITINH = nv.GIOITINH;
+                //tt.NGAYSINH = nv.NGAYSINH.Value.ToString("dd/MM/yyyy");
+                //tt.NGAYKHAMDAUTIEN = nv.NGAYKHAMDAUTIEN.Value.ToString("dd/MM/yyyy");
+                //tt.DIENTHOAI = nv.DIENTHOAI;
+                //tt.DIACHI = nv.DIACHI;
 
-                //if (cddttInfo != null)
-                //{
-                //    tt.TENDIEUTRI = cddttInfo.TENDIEUTRI;
-                //    tt.DONVITINH = cddttInfo.DONVITINH;
-                //    tt.SOLUONG = cddttInfo.SOLUONG;
-                //    tt.DONGIA = cddttInfo.DONGIA;
-                //    tt.THANHTIEN = cddttInfo.THANHTIEN;
-                //}
-                //else
-                //{
-                //    tt.TENDIEUTRI = "Không điều trị";
-                //    tt.DONVITINH = "0"; 
-                //    tt.SOLUONG = "0"; 
-                //    tt.DONGIA = 0; 
-                //    tt.THANHTIEN = 0; 
-                //}
 
                 var cddttInfoList = db.CHUANDOAN_DIEUTRI
                   .Where(a => a.MABN == item.MABN)
@@ -207,13 +184,15 @@ namespace PHONGKHAMNHAKHOA.BLL
 
                 if (cddttInfoList.Count > 0)
                 {
-                    // Lấy thông tin từ danh sách (có thể dùng vòng lặp nếu cần)
+                    // Lấy thông tin từ danh sách
                     var cddttInfo = cddttInfoList[0];
+
                     tt.TENDIEUTRI = cddttInfo.TENDIEUTRI;
                     tt.DONVITINH = cddttInfo.DONVITINH;
                     tt.SOLUONG = cddttInfo.SOLUONG;
                     tt.DONGIA = cddttInfo.DONGIA;
                     tt.THANHTIEN = cddttInfo.THANHTIEN;
+
                 }
                 else
                 {
@@ -224,43 +203,9 @@ namespace PHONGKHAMNHAKHOA.BLL
                     tt.THANHTIEN = 0;
                 }
 
-                //var cddtt = db.CHUANDOAN_DIEUTRI
-                //    .Where(a => a.MACDDC == item.MACDDC)
-                //    .Select(a => a.LOAIDIEUTRI.TENDIEUTRI)
-                //    .FirstOrDefault();
 
-                //if (cddtt != null)
-                //{
-                //    tt.TENDIEUTRI = cddtt;
-                //}
-                //var cddt = db.CHUANDOAN_DIEUTRI.FirstOrDefault(n => n.MACDDC == item.MACDDC);
-                ////tt.TENDIEUTRI = cddt.LOAIDIEUTRI.TENDIEUTRI;
-                //tt.DONVITINH = cddt.DONVITINH;
-                //tt.SOLUONG = cddt.SOLUONG;
-                //tt.DONGIA = cddt.DONGIA;
-                //tt.THANHTIEN = cddt.THANHTIEN;
 
-                // lấy ten thuốc
-                //var dt = db.DONTHUOC
-                //    .Where(a => a.MABN == item.MABN)
-                //    .Select(a => a.LOAITHUOC.TENLOAITHUOC)
-                //    .FirstOrDefault();
-
-                //if (dt != null)
-                //{
-                //    tt.TENLOAITHUOC = dt;
-                //}
-                //else
-                //{
-                //    tt.TENLOAITHUOC = "Không dùng thuốc";
-                //}
-
-                //var dtt = db.DONTHUOC.FirstOrDefault(n => n.MABN == item.MABN);
-                //tt.DONVITINHTHUOC = dtt.DONVITINHTHUOC;
-                //tt.SOLUONGTHUOC = dtt.SOLUONGTHUOC;
-                //tt.DONGIATHUOC = dtt.DONGIATHUOC;
-                //tt.THANHTIENTHUOC = dtt.THANHTIENTHUOC;
-                var donthuoc = db.DONTHUOC
+                var InfoListThuoc = db.DONTHUOC
                   .Where(a => a.MABN == item.MABN)
                   .Select(a => new
                   {
@@ -270,31 +215,30 @@ namespace PHONGKHAMNHAKHOA.BLL
                       DONGIATHUOC = a.DONGIATHUOC,
                       THANHTIENTHUOC = a.THANHTIENTHUOC
                   })
-                  .FirstOrDefault();
+                  .ToList();
 
-                if (donthuoc != null)
+                if (InfoListThuoc.Count > 0)
                 {
-                    tt.TENLOAITHUOC = donthuoc.TENLOAITHUOC;
-                    tt.DONVITINHTHUOC = donthuoc.DONVITINHTHUOC;
-                    tt.SOLUONGTHUOC = donthuoc.SOLUONGTHUOC;
-                    tt.DONGIATHUOC = donthuoc.DONGIATHUOC;
-                    tt.THANHTIENTHUOC = donthuoc.THANHTIENTHUOC;
+                    // Lấy thông tin từ danh sách
+                    var cddttInfo = InfoListThuoc[0];
+                    tt.TENLOAITHUOC = cddttInfo.TENLOAITHUOC;
+                    tt.DONVITINHTHUOC = cddttInfo.DONVITINHTHUOC;
+                    tt.SOLUONGTHUOC = cddttInfo.SOLUONGTHUOC;
+                    tt.DONGIATHUOC = cddttInfo.DONGIATHUOC;
+                    tt.THANHTIENTHUOC = cddttInfo.THANHTIENTHUOC;
                 }
                 else
                 {
                     tt.TENLOAITHUOC = "Không dùng thuốc";
-                    tt.DONVITINHTHUOC = "0"; 
-                    tt.SOLUONGTHUOC = "0"; 
-                    tt.DONGIATHUOC = 0; 
-                    tt.THANHTIENTHUOC = 0; 
+                    tt.DONVITINHTHUOC = "0";
+                    tt.SOLUONGTHUOC = "0";
+                    tt.DONGIATHUOC = 0;
+                    tt.THANHTIENTHUOC = 0;
                 }
 
                 lstTT.Add(tt);
-
             }
             return lstTT;
         }
-
-        
     }
 }

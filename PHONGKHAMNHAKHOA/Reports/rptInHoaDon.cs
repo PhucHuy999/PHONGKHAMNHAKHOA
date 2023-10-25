@@ -15,7 +15,7 @@ namespace PHONGKHAMNHAKHOA.GUI.Reports
             InitializeComponent();
         }
         List<THANHTOAN_FULL> _lstTT;
-
+        
         public rptInHoaDon(List<THANHTOAN_FULL> lsttt)
         {
             InitializeComponent();
@@ -26,21 +26,21 @@ namespace PHONGKHAMNHAKHOA.GUI.Reports
         void loadData()
         {
 
-            lblLOAIDIEUTRI.DataBindings.Add("Text", DataSource, "TENDIEUTRI");
-            lblDONVI.DataBindings.Add("Text", DataSource, "DONVITINH");
-            lblSOLUONG.DataBindings.Add("Text", DataSource, "SOLUONG");
-            lblDONGIA.DataBindings.Add("Text", DataSource, "DONGIA");
-            lblTHANHTIEN.DataBindings.Add("Text", DataSource, "THANHTIEN");
+            lblLOAIDIEUTRI.DataBindings.Add("Text", _lstTT, "TENDIEUTRI");
+            lblDONVI.DataBindings.Add("Text", _lstTT, "DONVITINH");
+            lblSOLUONG.DataBindings.Add("Text", _lstTT, "SOLUONG");
+            lblDONGIA.DataBindings.Add("Text", _lstTT, "DONGIA");
+            lblTHANHTIEN.DataBindings.Add("Text", _lstTT, "THANHTIEN");
 
-            lblLOAITHUOC.DataBindings.Add("Text", DataSource, "TENLOAITHUOC");
-            lblDONVITHUOC.DataBindings.Add("Text", DataSource, "DONVITINHTHUOC");
-            lblSOLUONGTHUOC.DataBindings.Add("Text", DataSource, "SOLUONGTHUOC");
-            lblDONGIATHUOC.DataBindings.Add("Text", DataSource, "DONGIATHUOC");
-            lblTHANHTIENTHUOC.DataBindings.Add("Text", DataSource, "THANHTIENTHUOC");
+            lblLOAITHUOC.DataBindings.Add("Text", _lstTT, "TENLOAITHUOC");
+            lblDONVITHUOC.DataBindings.Add("Text", _lstTT, "DONVITINHTHUOC");
+            lblSOLUONGTHUOC.DataBindings.Add("Text", _lstTT, "SOLUONGTHUOC");
+            lblDONGIATHUOC.DataBindings.Add("Text", _lstTT, "DONGIATHUOC");
+            lblTHANHTIENTHUOC.DataBindings.Add("Text", _lstTT, "THANHTIENTHUOC");
 
-            lblTONGPHAITHANHTOAN.DataBindings.Add("Text", DataSource, "TONGPHAITHANHTOAN");
-            lblSOTIENDATHANHTOAN.DataBindings.Add("Text", DataSource, "SOTIENDATHANHTOAN");
-            lblSOTIENCONLAI.DataBindings.Add("Text", DataSource, "SOTIENCONLAI");
+            lblTONGPHAITHANHTOAN.DataBindings.Add("Text", _lstTT, "TONGPHAITHANHTOAN");
+            lblSOTIENDATHANHTOAN.DataBindings.Add("Text", _lstTT, "SOTIENDATHANHTOAN");
+            lblSOTIENCONLAI.DataBindings.Add("Text", _lstTT, "SOTIENCONLAI");
 
 
         }

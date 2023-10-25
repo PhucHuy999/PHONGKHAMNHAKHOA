@@ -26,6 +26,11 @@ namespace PHONGKHAMNHAKHOA.DAL.Entities
 
         public int? MABN { get; set; }
 
+        public DateTime? NGAY { get; set; }
+
+        [StringLength(200)]
+        public string CACHDUNG { get; set; }
+
         public virtual LOAITHUOC LOAITHUOC { get; set; }
 
         public virtual THONGTINBENHNHAN THONGTINBENHNHAN { get; set; }
