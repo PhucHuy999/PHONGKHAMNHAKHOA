@@ -15,14 +15,14 @@ namespace PHONGKHAMNHAKHOA.DAL.Entities
         public int? MALOAITHUOC { get; set; }
 
         [StringLength(50)]
-        public string DONVITINH { get; set; }
+        public string DONVITINHTHUOC { get; set; }
 
         [StringLength(10)]
-        public string SOLUONG { get; set; }
+        public string SOLUONGTHUOC { get; set; }
 
-        public double? DONGIA { get; set; }
+        public double? DONGIATHUOC { get; set; }
 
-        public double? THANHTIEN { get; set; }
+        public double? THANHTIENTHUOC { get; set; }
 
         public int? MABN { get; set; }
 

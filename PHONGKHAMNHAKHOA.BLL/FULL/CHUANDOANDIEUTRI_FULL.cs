@@ -25,5 +25,7 @@ namespace PHONGKHAMNHAKHOA.BLL.FULL
 
         public virtual THONGTINBENHNHAN THONGTINBENHNHAN { get; set; }
         public virtual LOAIDIEUTRI LOAIDIEUTRI { get; set; }
+
+
     }
 }

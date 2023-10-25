@@ -30,10 +30,10 @@ namespace PHONGKHAMNHAKHOA.BLL
             {
                 dtDTO = new DONTHUOC_FULL();
                 dtDTO.MADT = item.MADT;
-                dtDTO.DONVITINH = item.DONVITINH;
-                dtDTO.SOLUONG = item.SOLUONG;
-                dtDTO.DONGIA = item.DONGIA;
-                dtDTO.THANHTIEN = item.THANHTIEN;
+                dtDTO.DONVITINH = item.DONVITINHTHUOC;
+                dtDTO.SOLUONG = item.SOLUONGTHUOC;
+                dtDTO.DONGIA = item.DONGIATHUOC;
+                dtDTO.THANHTIEN = item.THANHTIENTHUOC;
 
                 dtDTO.MALOAITHUOC = item.MALOAITHUOC;
                 var dt = db.LOAITHUOC.FirstOrDefault(c => c.MALOAITHUOC == item.MALOAITHUOC);// để lấy được tên loại điều trị
@@ -66,10 +66,10 @@ namespace PHONGKHAMNHAKHOA.BLL
             {
                 var _dt = db.DONTHUOC.FirstOrDefault(x => x.MADT == dt.MADT);
                 _dt.MALOAITHUOC = dt.MALOAITHUOC;
-                _dt.DONVITINH = dt.DONVITINH;
-                _dt.SOLUONG = dt.SOLUONG;
-                _dt.DONGIA = dt.DONGIA;
-                _dt.THANHTIEN = dt.THANHTIEN;
+                _dt.DONVITINHTHUOC = dt.DONVITINHTHUOC;
+                _dt.SOLUONGTHUOC = dt.SOLUONGTHUOC;
+                _dt.DONGIATHUOC = dt.DONGIATHUOC;
+                _dt.THANHTIENTHUOC = dt.THANHTIENTHUOC;
                 _dt.MABN = dt.MABN;
 
                 db.SaveChanges();

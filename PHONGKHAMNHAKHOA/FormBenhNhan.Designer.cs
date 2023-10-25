@@ -296,6 +296,7 @@
             // 
             // txtLyDoDenKham
             // 
+            this.txtLyDoDenKham.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.txtLyDoDenKham.Location = new System.Drawing.Point(552, 66);
             this.txtLyDoDenKham.Name = "txtLyDoDenKham";
             this.txtLyDoDenKham.Size = new System.Drawing.Size(308, 21);

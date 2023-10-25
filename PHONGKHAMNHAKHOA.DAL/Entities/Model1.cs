@@ -30,7 +30,7 @@ namespace PHONGKHAMNHAKHOA.DAL.Entities
                 .IsFixedLength();
 
             modelBuilder.Entity<DONTHUOC>()
-                .Property(e => e.SOLUONG)
+                .Property(e => e.SOLUONGTHUOC)
                 .IsFixedLength();
 
             modelBuilder.Entity<NHAPXUAT_DCVLNK>()

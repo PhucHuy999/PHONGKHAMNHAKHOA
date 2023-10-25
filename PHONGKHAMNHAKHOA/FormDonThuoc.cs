@@ -134,10 +134,10 @@ namespace PHONGKHAMNHAKHOA.GUI
             {
                 _id = int.Parse(gvDanhSach.GetFocusedRowCellValue("MADT").ToString());
                 var cddt = _dt.GetItem(_id);
-                txtDonViTinh.Text = cddt.DONVITINH;
-                txtSoLuong.Text = cddt.SOLUONG;
-                txtDonGia.Text = cddt.DONGIA.ToString();
-                txtThanhTien.Text = cddt.THANHTIEN.ToString();
+                txtDonViTinh.Text = cddt.DONVITINHTHUOC;
+                txtSoLuong.Text = cddt.SOLUONGTHUOC;
+                txtDonGia.Text = cddt.DONGIATHUOC.ToString();
+                txtThanhTien.Text = cddt.THANHTIENTHUOC.ToString();
 
                 slkLoaiThuoc.EditValue = cddt.MALOAITHUOC;
                 slkBenhNhan.EditValue = cddt.MABN;
@@ -148,10 +148,10 @@ namespace PHONGKHAMNHAKHOA.GUI
             if (_them)
             {
                 DONTHUOC dt = new DONTHUOC();
-                dt.DONVITINH = txtDonViTinh.Text;
-                dt.SOLUONG = txtSoLuong.Text;
-                dt.DONGIA = double.Parse(txtDonGia.EditValue.ToString());
-                dt.THANHTIEN = double.Parse(txtThanhTien.EditValue.ToString());
+                dt.DONVITINHTHUOC = txtDonViTinh.Text;
+                dt.SOLUONGTHUOC = txtSoLuong.Text;
+                dt.DONGIATHUOC = double.Parse(txtDonGia.EditValue.ToString());
+                dt.THANHTIENTHUOC = double.Parse(txtThanhTien.EditValue.ToString());
 
                 dt.MALOAITHUOC = int.Parse(slkLoaiThuoc.EditValue.ToString());
                 dt.MABN = int.Parse(slkBenhNhan.EditValue.ToString());
@@ -161,10 +161,10 @@ namespace PHONGKHAMNHAKHOA.GUI
             else
             {
                 var dt = _dt.GetItem(_id);
-                dt.DONVITINH = txtDonViTinh.Text;
-                dt.SOLUONG = txtSoLuong.Text;
-                dt.DONGIA = double.Parse(txtDonGia.EditValue.ToString());
-                dt.THANHTIEN = double.Parse(txtThanhTien.EditValue.ToString());
+                dt.DONVITINHTHUOC = txtDonViTinh.Text;
+                dt.SOLUONGTHUOC = txtSoLuong.Text;
+                dt.DONGIATHUOC = double.Parse(txtDonGia.EditValue.ToString());
+                dt.THANHTIENTHUOC = double.Parse(txtThanhTien.EditValue.ToString());
 
                 dt.MALOAITHUOC = int.Parse(slkLoaiThuoc.EditValue.ToString());
                 dt.MABN = int.Parse(slkBenhNhan.EditValue.ToString());

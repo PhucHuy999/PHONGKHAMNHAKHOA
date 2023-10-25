@@ -1,7 +1,9 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 using PHONGKHAMNHAKHOA.BLL;
 using PHONGKHAMNHAKHOA.BLL.FULL;
 using PHONGKHAMNHAKHOA.DAL.Entities;
+using PHONGKHAMNHAKHOA.GUI.Reports;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -134,7 +136,9 @@ namespace PHONGKHAMNHAKHOA.GUI
 
         private void btnIn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            _lstTT = _thanhtoan.getItemFull(_id);
+            rptInHoaDon rpt = new rptInHoaDon(_lstTT);
+            rpt.ShowPreviewDialog();
         }
 
         private void btnDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -256,9 +260,10 @@ namespace PHONGKHAMNHAKHOA.GUI
                 txtGhiChu.Text = tt.GHICHU;
                 txtTongPhaiThanhToan.Text = tt.TONGPHAITHANHTOAN.Value.ToString("N0");
 
-
                 txtMaCDDT.Text = tt.MACDDC.ToString();
                 slkBenhNhan.EditValue = tt.MABN;
+
+                _lstTT = _thanhtoan.getItemFull(_id);
             }
         }
         private void SaveData()
