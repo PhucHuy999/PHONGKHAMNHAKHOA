@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PHONGKHAMNHAKHOA.BLL;
 using Unidecode.NET;
+using PHONGKHAMNHAKHOA.GUI.Reports;
+using DevExpress.XtraReports.UI;
 
 namespace PHONGKHAMNHAKHOA.GUI
 {
@@ -108,7 +110,8 @@ namespace PHONGKHAMNHAKHOA.GUI
 
         private void btnIn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            rptDanhSachBenhNhan rpt = new rptDanhSachBenhNhan(_lstbenhnhan);
+            rpt.ShowPreviewDialog();
         }
 
         private void btnDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
