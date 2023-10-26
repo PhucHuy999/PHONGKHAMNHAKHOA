@@ -209,5 +209,7 @@ namespace PHONGKHAMNHAKHOA.GUI
                 txtNoiDung.Text = nx.NOIDUNG;
             }
         }
+
+        
     }
 }

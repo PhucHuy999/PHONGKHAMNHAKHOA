@@ -238,5 +238,24 @@ namespace PHONGKHAMNHAKHOA.GUI
 
             gcDanhSach.DataSource = filteredList;
         }
+
+        //private void gvDanhSach_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
+        //{
+        //    if (e.Column.FieldName == "GIOITINH") 
+        //    {
+        //        if (e.Value != null)
+        //        {
+        //            bool value = (bool)e.Value;
+        //            if (value)
+        //            {
+        //                e.DisplayText = "Nam";
+        //            }
+        //            else
+        //            {
+        //                e.DisplayText = "Nữ";
+        //            }
+        //        }
+        //    }
+        //}
     }
 }

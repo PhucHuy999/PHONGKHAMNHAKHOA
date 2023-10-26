@@ -166,6 +166,12 @@
     <Compile Include="FormTHANHTOAN.Designer.cs">
       <DependentUpon>FormTHANHTOAN.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThongKeNhapXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThongKeNhapXuat.Designer.cs">
+      <DependentUpon>FormThongKeNhapXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThongTinCanLamSang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,12 @@
     </Compile>
     <Compile Include="Reports\rptInHoaDon.Designer.cs">
       <DependentUpon>rptInHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptThongKeNhapXuatDCVL.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptThongKeNhapXuatDCVL.Designer.cs">
+      <DependentUpon>rptThongKeNhapXuatDCVL.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormBenhNhan.resx">
       <DependentUpon>FormBenhNhan.cs</DependentUpon>
@@ -240,6 +252,9 @@
     <EmbeddedResource Include="FormTHANHTOAN.resx">
       <DependentUpon>FormTHANHTOAN.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormThongKeNhapXuat.resx">
+      <DependentUpon>FormThongKeNhapXuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormThongTinCanLamSang.resx">
       <DependentUpon>FormThongTinCanLamSang.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptInHoaDon.resx">
       <DependentUpon>rptInHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptThongKeNhapXuatDCVL.resx">
+      <DependentUpon>rptThongKeNhapXuatDCVL.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

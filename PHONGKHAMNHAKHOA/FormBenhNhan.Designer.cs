@@ -506,7 +506,6 @@
             this.GIOITINH.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.GIOITINH.AppearanceHeader.Options.UseFont = true;
             this.GIOITINH.Caption = "GIỚI TÍNH";
-            this.GIOITINH.DisplayFormat.FormatString = "if([GIOITINH] = true, \'Nam\', \'Nữ\')";
             this.GIOITINH.FieldName = "GIOITINH";
             this.GIOITINH.FilterMode = DevExpress.XtraGrid.ColumnFilterMode.DisplayText;
             this.GIOITINH.MaxWidth = 65;
