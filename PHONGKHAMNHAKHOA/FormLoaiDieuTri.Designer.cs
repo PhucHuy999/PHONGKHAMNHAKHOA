@@ -147,7 +147,7 @@
             // 
             // btnIn
             // 
-            this.btnIn.Caption = "In";
+            this.btnIn.Caption = "In Danh Sách";
             this.btnIn.Id = 7;
             this.btnIn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnIn.ImageOptions.SvgImage")));
             this.btnIn.Name = "btnIn";
@@ -294,12 +294,12 @@
             this.TENDIEUTRI.AppearanceHeader.Options.UseFont = true;
             this.TENDIEUTRI.Caption = "TÊN ĐIỀU TRỊ";
             this.TENDIEUTRI.FieldName = "TENDIEUTRI";
-            this.TENDIEUTRI.MaxWidth = 300;
-            this.TENDIEUTRI.MinWidth = 300;
+            this.TENDIEUTRI.MaxWidth = 500;
+            this.TENDIEUTRI.MinWidth = 500;
             this.TENDIEUTRI.Name = "TENDIEUTRI";
             this.TENDIEUTRI.Visible = true;
             this.TENDIEUTRI.VisibleIndex = 1;
-            this.TENDIEUTRI.Width = 300;
+            this.TENDIEUTRI.Width = 500;
             // 
             // FormLoaiDieuTri
             // 

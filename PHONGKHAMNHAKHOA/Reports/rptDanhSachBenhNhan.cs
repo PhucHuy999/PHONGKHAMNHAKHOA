@@ -14,12 +14,12 @@ namespace PHONGKHAMNHAKHOA.GUI.Reports
         {
             InitializeComponent();
         }
-        List<THONGTINBENHNHAN> _lstBN;
-        public rptDanhSachBenhNhan(List<THONGTINBENHNHAN> _lstbenhnhan)
+        List<THONGTINBENHNHAN> _lstLDT;
+        public rptDanhSachBenhNhan(List<THONGTINBENHNHAN> _lstloaidieutri)
         {
             InitializeComponent();
-            this._lstBN = _lstbenhnhan;
-            this.DataSource = _lstBN;
+            this._lstLDT = _lstloaidieutri;
+            this.DataSource = _lstLDT;
             loadData();
         }
         void loadData()

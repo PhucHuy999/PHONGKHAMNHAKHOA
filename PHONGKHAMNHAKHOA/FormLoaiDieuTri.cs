@@ -1,6 +1,8 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 using PHONGKHAMNHAKHOA.BLL;
 using PHONGKHAMNHAKHOA.DAL.Entities;
+using PHONGKHAMNHAKHOA.GUI.Reports;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -97,7 +99,8 @@ namespace PHONGKHAMNHAKHOA.GUI
 
         private void btnIn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            rptDanhSachLoaiDieuTri rpt = new rptDanhSachLoaiDieuTri(_lstloaidieutri);
+            rpt.ShowPreviewDialog();
         }
 
         private void btnDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

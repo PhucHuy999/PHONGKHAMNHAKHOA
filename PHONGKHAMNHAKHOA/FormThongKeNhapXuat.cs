@@ -36,7 +36,6 @@ namespace PHONGKHAMNHAKHOA.GUI
             cboNam.Text = DateTime.Now.Year.ToString();
             cboThang.Text = DateTime.Now.Month.ToString();
             loadData();
-            _namky = int.Parse(cboNam.Text) * 100 + int.Parse(cboThang.Text);
         }
         
         void loadData()
@@ -44,8 +43,10 @@ namespace PHONGKHAMNHAKHOA.GUI
             gcDanhSach.DataSource = _nhapxuat.GetAll();
             gvDanhSach.OptionsBehavior.Editable = false;
             _lstnhapxuat = _nhapxuat.GetAll();
+
+            _namky = int.Parse(cboNam.Text) * 100 + int.Parse(cboThang.Text);
         }
-        
+
         private void btnIn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             rptThongKeNhapXuatDCVL rpt = new rptThongKeNhapXuatDCVL(_lstnhapxuat, _namky);
@@ -84,6 +85,7 @@ namespace PHONGKHAMNHAKHOA.GUI
 
             // Lọc dữ liệu theo năm và tháng
             _lstnhapxuat = _nhapxuat.GetAll(year, month);
+            _namky = int.Parse(cboNam.Text) * 100 + int.Parse(cboThang.Text);
 
             // Cập nhật dữ liệu trên GridControl
             gcDanhSach.DataSource = _lstnhapxuat;

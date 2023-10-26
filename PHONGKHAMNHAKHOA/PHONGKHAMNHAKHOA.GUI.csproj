@@ -198,6 +198,12 @@
     <Compile Include="Reports\rptDanhSachBenhNhan.Designer.cs">
       <DependentUpon>rptDanhSachBenhNhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\rptDanhSachLoaiDieuTri.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptDanhSachLoaiDieuTri.Designer.cs">
+      <DependentUpon>rptDanhSachLoaiDieuTri.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\rptInDonThuoc.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -283,6 +289,9 @@
     </Compile>
     <EmbeddedResource Include="Reports\rptDanhSachBenhNhan.resx">
       <DependentUpon>rptDanhSachBenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptDanhSachLoaiDieuTri.resx">
+      <DependentUpon>rptDanhSachLoaiDieuTri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptInDonThuoc.resx">
       <DependentUpon>rptInDonThuoc.cs</DependentUpon>
