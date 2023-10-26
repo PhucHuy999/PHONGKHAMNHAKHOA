@@ -38,14 +38,14 @@ namespace PHONGKHAMNHAKHOA.GUI
             loadData();
             _namky = int.Parse(cboNam.Text) * 100 + int.Parse(cboThang.Text);
         }
+        
         void loadData()
         {
-            gcDanhSach.DataSource = _nhapxuat.GetAll(/*int.Parse(cboNam.Text) * 100 + int.Parse(cboThang.Text)*/);
+            gcDanhSach.DataSource = _nhapxuat.GetAll();
             gvDanhSach.OptionsBehavior.Editable = false;
-            _lstnhapxuat = _nhapxuat.GetAll(/*int.Parse(cboNam.Text) * 100 + int.Parse(cboThang.Text)*/);
-            
+            _lstnhapxuat = _nhapxuat.GetAll();
         }
-
+        
         private void btnIn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             rptThongKeNhapXuatDCVL rpt = new rptThongKeNhapXuatDCVL(_lstnhapxuat, _namky);
@@ -74,6 +74,19 @@ namespace PHONGKHAMNHAKHOA.GUI
                     }
                 }
             }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            // Lấy giá trị năm và tháng từ các ComboBox
+            int year = int.Parse(cboNam.Text);
+            int month = int.Parse(cboThang.Text);
+
+            // Lọc dữ liệu theo năm và tháng
+            _lstnhapxuat = _nhapxuat.GetAll(year, month);
+
+            // Cập nhật dữ liệu trên GridControl
+            gcDanhSach.DataSource = _lstnhapxuat;
         }
     }
 }

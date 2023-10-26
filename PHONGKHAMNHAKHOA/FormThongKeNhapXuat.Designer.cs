@@ -61,6 +61,7 @@
             this.THANHTIEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NGAY = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NOIDUNG = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -218,6 +219,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.simpleButton1);
             this.splitContainer1.Panel1.Controls.Add(this.cboThang);
             this.splitContainer1.Panel1.Controls.Add(this.cboNam);
             this.splitContainer1.Panel1.Controls.Add(this.labelControl2);
@@ -458,6 +460,15 @@
             this.NOIDUNG.Visible = true;
             this.NOIDUNG.VisibleIndex = 8;
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(557, 47);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.TabIndex = 9;
+            this.simpleButton1.Text = "Lọc";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // FormThongKeNhapXuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -517,5 +528,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraGrid.Columns.GridColumn LOAI;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

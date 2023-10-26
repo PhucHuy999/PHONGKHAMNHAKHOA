@@ -11,7 +11,7 @@ namespace PHONGKHAMNHAKHOA.BLL
     {
         Model1 db = new Model1();
 
-        
+
         public NHAPXUAT_DCVLNK getItem(string id)
         {
             return db.NHAPXUAT_DCVLNK.FirstOrDefault(x => x.ID == id);
@@ -24,12 +24,13 @@ namespace PHONGKHAMNHAKHOA.BLL
         {
             return db.NHAPXUAT_DCVLNK.ToList();
         }
-        //public List<NHAPXUAT_DCVLNK> GetAll(int year, int month)
-        //{
-        //    return db.NHAPXUAT_DCVLNK
-        //        .Where(x => x.NGAY.HasValue && x.NGAY.Value.Year == year && x.NGAY.Value.Month == month)
-        //        .ToList();
-        //}
+        public List<NHAPXUAT_DCVLNK> GetAll(int year, int month)
+        {
+            return db.NHAPXUAT_DCVLNK
+                .Where(x => x.NGAY.HasValue && x.NGAY.Value.Year == year && x.NGAY.Value.Month == month)
+                .ToList();
+        }
+
         public NHAPXUAT_DCVLNK Add(NHAPXUAT_DCVLNK nx)
         {
             try
@@ -69,7 +70,7 @@ namespace PHONGKHAMNHAKHOA.BLL
             }
         }
 
-       
+
         public void Delete(string id)
         {
             try
@@ -95,6 +96,6 @@ namespace PHONGKHAMNHAKHOA.BLL
                 return "00000";
         }
 
-        
+
     }
 }
